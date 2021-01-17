@@ -1,0 +1,52 @@
+.Footer {
+    display: flex;
+    flex-direction: row;
+    background-color:#025951;
+    color:#fff;
+    width: auto;
+    height: auto;
+}
+
+.Footer-logo {
+    display: flex;
+    background-color: #fff;
+    width: 80%;
+    height: auto;
+    padding: 20px;
+        @media (max-width: 600px) {
+            width: 100%;
+        }
+}
+
+.Footer-Box-1 {
+    display: flex;
+    padding: 5px;
+
+}
+.Footer-Box-2 {
+    display: flex;
+    padding: 15px 5px 5px 5px;
+     a {
+         color:#fff;
+     }
+}
+
+.Footer-Box-3 {
+    display: flex;
+    padding: 5px;
+
+}
+
+
+.FBox-1 {
+    display: flex;
+    width: 300px;
+}
+.FBox-3 {
+    display: flex;
+    width: 300px;
+}
+.FBox-4 {
+    display: flex;
+    width: 300px;
+}

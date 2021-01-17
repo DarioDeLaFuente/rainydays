@@ -1,0 +1,18 @@
+{
+  "name": "rainydays",
+  "version": "1.0.0",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^3.0.1",
+    "gulp-cssmin": "^0.1.7",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.0.4"
+  },
+  "description": "rainydays",
+  "author": "Dario <dario@dario.no>",
+  "license": "MIT",
+  "scripts": {
+    "build": "gulp build",
+    "watch": "gulp watch"
+  }
+}

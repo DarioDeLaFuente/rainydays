@@ -1,0 +1,31 @@
+/* Style the Navbar */
+  .topnav {
+    background-color: #025951;
+    display: flex;
+    justify-content: center;
+    ul {
+      display: flex;
+    }
+    li {
+      display: flex;
+    }
+    a {
+      color: #fff;
+      padding: 5px;
+      margin: 0 10px;
+      text-decoration: none;
+      font-size: 15px;
+      &:hover {
+        color: black;
+      }
+      &.active {
+        background-color: #2196F3;
+        color: white;
+      }
+    }
+  }
+ 
+
+
+  
+
