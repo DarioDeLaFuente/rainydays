@@ -23,6 +23,3 @@ The goal of these tasks is to create an end project. Ref: https://xd.adobe.com/v
     5. Use Continuous Deployment to connect to GitHub and choose the repo you created in step 1.
 <<<<<<< HEAD
     6. Deploy the site and click across to see your repo being deployed.
-=======
-    6. Deploy the site and click across to see your repo being deployed.
->>>>>>> 9a58276ff4e46773c730a09f5bb741b78da43857
