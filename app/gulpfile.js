@@ -8,34 +8,31 @@
   var autoprefixer = require('gulp-autoprefixer');
   var cssmin = require('gulp-cssmin');
   var rename = require('gulp-rename');
+  var cleanCss = require('gulp-clean-css')
   var sass = require('gulp-sass');
 
-  /**
-   * Styles
-   */
-  gulp.task('build', function() {
-    return gulp.src('src/scss/main.scss')
-      .pipe(sass({
-        outputStyle: 'expanded'
-      }))
+  var paths = {
+    sass: ['./src/scss/**/*.scss']
+  };
+  
+  gulp.task('sass', function(done) {
+    gulp.src('./src/scss/*.scss')
+      .pipe(sass())
       .on('error', sass.logError)
+      .pipe(gulp.dest('./assets/css/'))
       .pipe(autoprefixer())
-      .pipe(cssmin())
-      .pipe(rename({
-        suffix: '.min'
+      .pipe(cleanCss({
+        keepSpecialComments: 0
       }))
-      .pipe(gulp.dest('assets/css'));
+      .pipe(rename({extname: '.min.css'}))
+      .pipe(gulp.dest('./assets/css/'))
+      .on('end', done);
+  });
+  
+  gulp.task('watch', function () {
+    gulp.watch(paths.sass, gulp.series('sass'));
   });
 
-  /**
-   * Watch task for development
-   */
-  gulp.task('watch', function() {
-    gulp.watch('src/scss/**/*.scss', ['build']);
-  });
+  gulp.task('build', gulp.series('sass'));
 
-  /**
-   * Default task
-   */
-  gulp.task('default', ['build']);
 })();
