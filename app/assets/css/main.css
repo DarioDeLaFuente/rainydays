@@ -910,3 +910,29 @@ input {
   width: 300px; }
 
 /* imports */
+.prod-box {
+  z-index: 4;
+  display: flex;
+  justify-content: center; }
+
+.prod-label {
+  display: flex;
+  z-index: 4;
+  margin-top: 25px;
+  margin-right: 130px;
+  position: absolute;
+  width: calc(55% - (20px * 1));
+  background-color: #8C8303;
+  text-transform: uppercase; }
+
+.i {
+  display: flex;
+  filter: brightness(80%);
+  position: absolute;
+  bottom: 256px;
+  right: -2px;
+  border: 16px solid #0000;
+  border-left-color: #7C7401;
+  box-shadow: inset 0 0 10px #000;
+  width: 30px;
+  height: 30px; }
