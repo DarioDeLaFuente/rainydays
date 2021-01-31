@@ -50,6 +50,7 @@ $padding--l: 30px;
     max-width:$Container;
     margin: auto;
     padding-top: 5px;
+    overflow: hidden;
    }
   .material-icons {
     font-size: 20px !important;
@@ -88,6 +89,7 @@ $padding--l: 30px;
     color: #000;
     text-decoration: none;
     padding: 15px;
+    margin-left: 21px;
   }
 
   .search-icon {
@@ -119,10 +121,17 @@ $padding--l: 30px;
   }
 
   .Box-2 {
-    text-align: center;
     display: flex;
-    margin-top: 10px;
+    margin-top: 5px;
+    justify-content: center;
+    margin-left: 35px;
+      @media #{$screen__l} 
+        {margin-top: 10px;
+          margin-left: 0;
+        }
   }
+
+
 
   .Box-3 {
     text-align: end;

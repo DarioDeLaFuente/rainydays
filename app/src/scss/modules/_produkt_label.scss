@@ -12,16 +12,20 @@
     width: calc(55% - (20px * 1));
     background-color: #8C8303;
     text-transform: uppercase;
+    @media #{$screen__l} 
+            {margin-left: 21.5px;}
 }
 .i {
     display: flex;
     filter: brightness(80%);
     position: absolute;
-    bottom: 256px;
-    right: -2px;
-    border: 16px solid #0000;
+    bottom: 293px;
+    right: -23px;
+    border: 26px solid #0000;
     border-left-color: #7C7401;
     box-shadow: inset 0 0 10px #000;
     width: 30px;
     height: 30px;
+        @media #{$screen__l} 
+            {bottom: 246px;}
 }

@@ -741,7 +741,8 @@ input {
 .Content {
   max-width: 1000px;
   margin: auto;
-  padding-top: 5px; }
+  padding-top: 5px;
+  overflow: hidden; }
 
 .material-icons {
   font-size: 20px !important; }
@@ -773,7 +774,8 @@ input {
   background-color: #fff;
   color: #000;
   text-decoration: none;
-  padding: 15px; }
+  padding: 15px;
+  margin-left: 21px; }
 
 .search-icon {
   display: flex;
@@ -799,9 +801,14 @@ input {
   display: flex; }
 
 .Box-2 {
-  text-align: center;
   display: flex;
-  margin-top: 10px; }
+  margin-top: 5px;
+  justify-content: center;
+  margin-left: 35px; }
+  @media only screen and (min-width: 1024px) {
+    .Box-2 {
+      margin-top: 10px;
+      margin-left: 0; } }
 
 .Box-3 {
   text-align: end;
@@ -860,10 +867,10 @@ input {
   background-size: cover; }
 
 .logo {
-  max-width: 40%; }
-  @media (max-width: 320px) {
+  max-width: 70%; }
+  @media only screen and (min-width: 1024px) {
     .logo {
-      min-width: 100%; } }
+      max-width: 40%; } }
 
 .Footer {
   display: flex;
@@ -924,15 +931,21 @@ input {
   width: calc(55% - (20px * 1));
   background-color: #8C8303;
   text-transform: uppercase; }
+  @media only screen and (min-width: 1024px) {
+    .prod-label {
+      margin-left: 21.5px; } }
 
 .i {
   display: flex;
   filter: brightness(80%);
   position: absolute;
-  bottom: 256px;
-  right: -2px;
-  border: 16px solid #0000;
+  bottom: 293px;
+  right: -23px;
+  border: 26px solid #0000;
   border-left-color: #7C7401;
   box-shadow: inset 0 0 10px #000;
   width: 30px;
   height: 30px; }
+  @media only screen and (min-width: 1024px) {
+    .i {
+      bottom: 246px; } }
