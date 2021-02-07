@@ -14,26 +14,33 @@ $padding--l: 30px;
     margin: 0;
   }
   
-  ul {
-    list-style-type: none;
-  }
-  a {
-    text-decoration: none;
-  }
   h1, h2 {
     font-weight: 300;
     line-height: 1.2;
     margin: 10px 0;
   }
 
-  p {
-    margin: 10px 0;
+  ul {
+    list-style-type: none;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  div p {
+    margin: 10px 5px;
   }
 
   img {
     width: 100%;
     height: auto;
   }
+
+
+
+
+
   .prod-img {
     box-shadow: 12px 13px 13px -10px #000, -20px 26px 4px 12px transparent;
   }
@@ -43,7 +50,6 @@ $padding--l: 30px;
     border-radius: 5px;
     margin: 2px;
     text-align: center;
-    text-decoration: none;
 }
 
   .Content {
@@ -71,7 +77,7 @@ $padding--l: 30px;
 
   .img-bax-baner {
       text-align: center;
-      padding-top: 20px;
+      padding-top: 6px;
   }
 
   .img-baner {
@@ -86,11 +92,15 @@ $padding--l: 30px;
 
   .bannerLink a {
     background-color: #fff;
-    color: #000;
-    text-decoration: none;
     padding: 15px;
     margin-left: 21px;
   }
+
+  a.bannerLinkBox{
+    color: #000;
+    font-weight: bolder;
+  }
+
 
   .search-icon {
     display: flex;

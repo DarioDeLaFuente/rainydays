@@ -5,16 +5,7 @@
  * NB! Mobile first 
  *
  *
- * Exampel of use:
- *@media #{$screen__s} 
-            {XXX: XXpx;}
- *@media #{$screen__m} 
-            {XXX: XXpx;}
- *@media #{$screen__l} 
-            {XXX: XXpx;}
- *@media #{$screen__xl} 
-            {XXX: XXpx;}
- */
+*/
 
 $screen__s : "only screen and (min-width: 460px)";
 $screen__m : "only screen and (min-width: 768px)";
