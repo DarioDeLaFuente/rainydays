@@ -3,6 +3,7 @@
     display: flex;
     justify-content: center;
 }
+
 .prod-label {
     display: flex;
     z-index: 4;
@@ -15,6 +16,17 @@
     @media #{$screen__l} 
             {margin-left: 21.5px;}
 }
+
+a.prod-label {
+    color: #fff; 
+    font-size: 15px;
+    justify-content: center;
+    height: 39px;
+    font-weight: bold;
+    @media #{$screen__l} 
+        {height: 35px;}
+}
+
 .i {
     display: flex;
     filter: brightness(80%);
@@ -27,5 +39,10 @@
     width: 30px;
     height: 30px;
         @media #{$screen__l} 
-            {bottom: 246px;}
+            {bottom: 250px;}
 }
+
+
+a.prod-card {
+    color: #000;
+  }
