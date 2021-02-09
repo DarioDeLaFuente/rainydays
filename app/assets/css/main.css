@@ -805,6 +805,17 @@ a.bannerLinkBox {
   -webkit-box-shadow: 0px 10px 13px -7px #000000, -20px 34px 18px 1px rgba(0, 0, 0, 0);
   box-shadow: 0px 10px 13px -7px #000000, -20px 34px 18px 1px rgba(0, 0, 0, 0); }
 
+.Box {
+  display: flex;
+  padding: 30px;
+  position: relative; }
+  .Box--center {
+    justify-content: center; }
+  .Box--left {
+    justify-content: flex-start; }
+  .Box--right {
+    justify-content: flex-end; }
+
 .Box-1 {
   text-align: start;
   display: flex; }
@@ -823,16 +834,8 @@ a.bannerLinkBox {
   text-align: end;
   margin-top: 5px; }
 
-.Box {
-  display: flex;
-  padding: 30px;
-  position: relative; }
-  .Box--center {
-    justify-content: center; }
-  .Box--left {
-    justify-content: flex-start; }
-  .Box--right {
-    justify-content: flex-end; }
+.Box--banner--center {
+  height: 250px; }
 
 .prod-card {
   bottom: 30px;
@@ -841,8 +844,53 @@ a.bannerLinkBox {
   width: calc(100% - (30px * 2));
   background-color: #fff; }
 
-.Box--banner--center {
-  height: 250px; }
+.Box-form {
+  display: flex;
+  padding: 30px;
+  position: relative;
+  justify-content: center; }
+
+.form-box-1 {
+  color: #fff;
+  background-color: #000;
+  display: flex;
+  flex-direction: column; }
+
+.form-box-2 {
+  background-color: #fff;
+  color: #000;
+  display: flex;
+  flex-direction: column; }
+
+.form {
+  display: flex;
+  flex-direction: column; }
+
+.form p {
+  display: flex;
+  justify-content: center; }
+
+.form-name {
+  display: flex;
+  justify-content: center; }
+
+.form-email {
+  display: flex;
+  justify-content: center; }
+
+.email-input {
+  width: 300px; }
+
+.Box-form-container {
+  display: flex; }
+
+.form-container-left {
+  display: flex;
+  flex-direction: column; }
+
+.form-container-right {
+  display: flex;
+  flex-direction: column; }
 
 /* Style the Navbar */
 .topnav {
@@ -857,7 +905,6 @@ a.bannerLinkBox {
     color: #fff;
     padding: 5px;
     margin: 0 10px;
-    text-decoration: none;
     font-size: 15px; }
     .topnav a:hover {
       color: black; }
