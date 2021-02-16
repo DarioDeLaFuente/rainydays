@@ -11,7 +11,7 @@
 <body>
   <header class="Header">
     <div class="Container">
-      <div class="Grid Grid--spaceBetween Grid--gutter-xl">
+      <div class="Grid Grid--spaceBetween">
         <div class="Grid-cell--xs-4 Grid-cell--md-4 Grid-cell--lg-4 Grid-cell--xl-2">
           <div class="Box-1">
             <a href="index.html">
@@ -50,37 +50,45 @@
       <div class="Container">
         <div class="Grid"> 
           <div class="Grid-cell--xs-12 Grid-cell--md-6 Grid-cell--lg-6">
-              <div class="Box-form">
-                <form class="form">
-                  <p>Send us your thoughts</p>
-                  <div class="form-name">
-                    <input type="text" id="name" placeholder="Dario De la Fuente">
-                  </div>
-                  <div class="form-email">
-                    <input class="email-input" type="email" id="name" placeholder="DarioDelaFuente@test.com">
-                  </div>
-                  <div class="Box-form-container">
-                    <div class="form-container-left">
-                      <input type="checkbox" id="cancel_order">
-                      <label for="cancel_order">Cancel order</label>
-                      <input type="checkbox" id="vacancies">
-                      <label for="vacancies">Vacancies</label>
-                      <input type="checkbox" id="privacy_and_data_security">
-                      <label for="privacy_and_data_security">Privacy and data security</label>
-                    </div>
-                    <div class="form-container-right">
-                      <input type="checkbox" id="return_and_exchange">
-                      <label for="return_and_exchange">Return and exchange</label>
-                      <input type="checkbox" id="guarantee">
-                      <label for="guarantee">Guarantee</label>
-                      <input type="checkbox" id="complaint">
-                      <label for="complaint">Complaint</label>
-                    </div>
-                  </div>
-                  <button>Submit</button>
-                </form>
+            <form class="form">
+              <p>Send us your thoughts</p>
+              <input class="form-name"type="text" id="name" placeholder="Dario De la Fuente">
+              <input class="email-input" type="email" id="name" placeholder="DarioDelaFuente@test.com">
+              <div class="checkbox-container">
+                <div class="form form--left">
+                  <label for="cancel_order">
+                    <input type="checkbox" id="cancel_order">Cancel order
+                    <span class="checkmark"></span>
+                  </label>
+                  <label for="vacancies">
+                    <input type="checkbox" id="vacancies">Vacancies
+                    <span class="checkmark"></span>
+                  </label>
+                  <label for="privacy_and_data_security">
+                    <input type="checkbox" id="privacy_and_data_security">Privacy and data security
+                    <span class="checkmark"></span>
+                  </label>
+                </div>
+                <div class="form form--right">
+                  <label for="return_and_exchange">
+                    <input type="checkbox" id="return_and_exchange">Return and exchange
+                    <span class="checkmark"></span>
+                  </label>
+                  <label for="guarantee">
+                    <input type="checkbox" id="guarantee">Guarantee
+                    <span class="checkmark"></span>
+                  </label>
+                  <label for="complaint">
+                    <input type="checkbox" id="complaint">Complaint
+                    <span class="checkmark"></span>
+                  </label>
+                </div>
               </div>
-            </div>
+              <div class="form-button">
+                <button>Submit</button>
+              </div>
+            </form>
+          </div>
           <div class="Grid-cell--xs-12 Grid-cell--md-6 Grid-cell--lg-6"> 
             <div class="Box form-box-1">
               <div>
@@ -146,5 +154,6 @@
       </div>
     </div>
   </footer><!-- /Footer -->
+  <script src="scripts/functios.js"></script>
 </body>
 </html>
