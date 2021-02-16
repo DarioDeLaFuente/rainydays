@@ -716,7 +716,13 @@
 
 body {
   font-family: 'Montserrat', sans-serif;
-  margin: 0; }
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column; }
+
+main {
+  flex: 1; }
 
 h1, h2 {
   font-weight: 300;
@@ -729,21 +735,18 @@ ul {
 a {
   text-decoration: none; }
 
-div p {
-  margin: 10px 5px; }
+input {
+  border: none; }
 
 img {
   width: 100%;
   height: auto; }
 
-.prod-img {
-  box-shadow: 12px 13px 13px -10px #000, -20px 26px 4px 12px transparent; }
+div p {
+  margin: 10px 5px; }
 
-input {
-  border: none;
-  border-radius: 5px;
-  margin: 2px;
-  text-align: center; }
+.material-icons {
+  font-size: 20px !important; }
 
 .Content {
   max-width: 1000px;
@@ -751,15 +754,67 @@ input {
   padding-top: 5px;
   overflow: hidden; }
 
-.material-icons {
-  font-size: 20px !important; }
+.Box {
+  display: flex;
+  padding: 30px;
+  position: relative; }
+  .Box--center {
+    justify-content: center; }
+  .Box--left {
+    justify-content: flex-start; }
+  .Box--right {
+    justify-content: flex-end; }
 
-.shopping_cart {
-  color: #fff;
+.Box-1 {
+  text-align: start;
+  display: flex; }
+
+.Box-2 {
+  display: flex;
+  margin-top: 5px;
+  justify-content: center;
+  margin-left: 35px; }
+  @media only screen and (min-width: 1024px) {
+    .Box-2 {
+      margin-top: 10px;
+      margin-left: 0; } }
+
+.Box-3 {
+  text-align: end;
+  margin-top: 5px; }
+
+.Box--banner--center {
+  height: 250px; }
+
+.prod-card {
+  bottom: 30px;
+  z-index: 4;
+  position: absolute;
+  width: calc(100% - (30px * 2));
+  background-color: #fff; }
+
+.prod-img {
+  box-shadow: 12px 13px 13px -10px #000, -20px 26px 4px 12px transparent; }
+
+/* Style the Navbar */
+.topnav {
   background-color: #025951;
-  padding: 6px;
-  border-radius: 12px;
-  width: 31px; }
+  display: flex;
+  justify-content: center; }
+  .topnav ul {
+    display: flex; }
+  .topnav li {
+    display: flex; }
+  .topnav a {
+    color: #fff;
+    padding: 5px;
+    margin: 0 10px;
+    font-size: 15px; }
+    .topnav a:hover {
+      color: black; }
+    .topnav a.active {
+      background-color: #2196F3;
+      color: white; }
 
 /* Style the header */
 .Header {
@@ -769,11 +824,20 @@ input {
   text-align: center;
   padding-top: 6px; }
 
+.img-bax-baner-jackets {
+  text-align: center;
+  padding-top: 100px;
+  padding-left: 670px; }
+
 .img-baner {
   width: 150px;
   height: 80px; }
 
 .bannerLink {
+  text-align: center;
+  padding-top: 25px; }
+
+.about-content-box {
   text-align: center;
   padding-top: 25px; }
 
@@ -805,70 +869,16 @@ a.bannerLinkBox {
   -webkit-box-shadow: 0px 10px 13px -7px #000000, -20px 34px 18px 1px rgba(0, 0, 0, 0);
   box-shadow: 0px 10px 13px -7px #000000, -20px 34px 18px 1px rgba(0, 0, 0, 0); }
 
-.Box-1 {
-  text-align: start;
-  display: flex; }
-
-.Box-2 {
-  display: flex;
-  margin-top: 5px;
-  justify-content: center;
-  margin-left: 35px; }
-  @media only screen and (min-width: 1024px) {
-    .Box-2 {
-      margin-top: 10px;
-      margin-left: 0; } }
-
-.Box-3 {
-  text-align: end;
-  margin-top: 5px; }
-
-.Box {
-  display: flex;
-  padding: 30px;
-  position: relative; }
-  .Box--center {
-    justify-content: center; }
-  .Box--left {
-    justify-content: flex-start; }
-  .Box--right {
-    justify-content: flex-end; }
-
-.prod-card {
-  bottom: 30px;
-  z-index: 4;
-  position: absolute;
-  width: calc(100% - (30px * 2));
-  background-color: #fff; }
-
-.Box--banner--center {
-  height: 250px; }
-
-/* Style the Navbar */
-.topnav {
+.shopping_cart {
+  color: #fff;
   background-color: #025951;
-  display: flex;
-  justify-content: center; }
-  .topnav ul {
-    display: flex; }
-  .topnav li {
-    display: flex; }
-  .topnav a {
-    color: #fff;
-    padding: 5px;
-    margin: 0 10px;
-    text-decoration: none;
-    font-size: 15px; }
-    .topnav a:hover {
-      color: black; }
-    .topnav a.active {
-      background-color: #2196F3;
-      color: white; }
+  padding: 6px;
+  border-radius: 12px;
+  width: 31px; }
 
 .Box-baner {
   width: 100%;
-  height: 200px;
-  margin-top: 20px; }
+  height: 200px; }
 
 .logoBaner {
   width: 100%;
@@ -876,6 +886,19 @@ a.bannerLinkBox {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover; }
+
+.About-logoBaner {
+  opacity: 0.65;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; }
+
+.about-content-box {
+  margin: 0;
+  padding: 50px 15px 70px 15px;
+  max-width: 50%;
+  color: #000;
+  font-size: 15px; }
 
 .logo {
   max-width: 70%; }
@@ -973,3 +996,71 @@ a.prod-label {
 
 a.prod-card {
   color: #000; }
+
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 30px; }
+  .form--left {
+    padding: 15px;
+    flex-direction: column; }
+  .form--right {
+    padding: 15px;
+    flex-direction: column; }
+
+.checkbox-container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-top: 25px; }
+
+.form-box-1 {
+  color: #fff;
+  background-color: #000;
+  display: flex;
+  flex-direction: column; }
+
+.form-box-2 {
+  background-color: #fff;
+  color: #000;
+  display: flex;
+  flex-direction: column; }
+
+.form-button {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 30px;
+  margin-top: 25px; }
+
+.email-input {
+  margin: 5px;
+  width: 55%;
+  text-align: start;
+  border: solid 1px #000;
+  border-radius: 5px;
+  padding: 5px; }
+
+.form-name {
+  margin: 5px;
+  width: 55%;
+  text-align: start;
+  border: solid 1px #000;
+  border-radius: 5px;
+  padding: 5px;
+  margin-top: 25px; }
+
+.form p {
+  font-size: 37px;
+  font: bold; }
+
+.form-button button {
+  color: #fff;
+  background-color: #025951;
+  border: solid 1px #707070;
+  border-radius: 50px;
+  height: 50px;
+  width: 300px;
+  font-size: 25px;
+  cursor: pointer; }

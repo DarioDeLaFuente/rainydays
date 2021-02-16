@@ -1,176 +1,120 @@
 $Container: 1000px;
 $padding--l: 30px;
+$padding--s: 15px;
+$padding--xs: 5px;
+
+$font--s:15px;
+$font--l:25px;
+$font--lx:37px;
 
 
 /* Reset av broser adding */
 * {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-  }
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
   
-  body {
-    font-family: 'Montserrat', sans-serif;
-    margin: 0;
-  }
-  
-  h1, h2 {
-    font-weight: 300;
-    line-height: 1.2;
-    margin: 10px 0;
-  }
-
-  ul {
-    list-style-type: none;
-  }
-
-  a {
-    text-decoration: none;
-  }
-
-  div p {
-    margin: 10px 5px;
-  }
-
-  img {
-    width: 100%;
-    height: auto;
-  }
-
-
-
-
-
-  .prod-img {
-    box-shadow: 12px 13px 13px -10px #000, -20px 26px 4px 12px transparent;
-  }
-
-  input {
-    border: none;
-    border-radius: 5px;
-    margin: 2px;
-    text-align: center;
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-  .Content {
-    max-width:$Container;
-    margin: auto;
-    padding-top: 5px;
-    overflow: hidden;
-   }
-  .material-icons {
-    font-size: 20px !important;
-  }
+main{
+  flex: 1;
+}
+  
+h1, h2 {
+  font-weight: 300;
+  line-height: 1.2;
+  margin: 10px 0;
+}
 
-  .shopping_cart {
-    color: #fff;
-    background-color: #025951;
-    padding: 6px;
-    border-radius: 12px;
-    width: 31px;
-  }
+ul {
+  list-style-type: none;
+}
 
-    /* Style the header */
-  .Header {
-      margin: 10px;
-  }
+a {
+  text-decoration: none;
+}
 
-  .img-bax-baner {
-      text-align: center;
-      padding-top: 6px;
-  }
+input {
+  border: none;
+}
 
-  .img-baner {
-      width: 150px;
-      height: 80px;
-  }
+img {
+  width: 100%;
+  height: auto;
+}
 
-  .bannerLink {
-    text-align: center;
-    padding-top: 25px;
-  }
+div p {
+  margin: 10px 5px;
+}
 
-  .bannerLink a {
-    background-color: #fff;
-    padding: 15px;
-    margin-left: 21px;
-  }
+.material-icons {
+  font-size: 20px !important;
+}
 
-  a.bannerLinkBox{
-    color: #000;
-    font-weight: bolder;
-  }
+.Content {
+  max-width:$Container;
+  margin: auto;
+  padding-top: 5px;
+  overflow: hidden;
+}
 
-
-  .search-icon {
-    display: flex;
-    justify-content: flex-end;
-    border: solid #f1f1f1;
-    border-radius: 10px 0px 0px 10px;
-    width: 30px;
-    padding: 1px;
-    -webkit-box-shadow: 0px 10px 13px -7px #000000, -20px 34px 18px 1px rgba(0,0,0,0); 
-    box-shadow: 0px 10px 13px -7px #000000, -20px 34px 18px 1px rgba(0,0,0,0);
-  }
-
-  .searchBar {
-    border: solid #f1f1f1;
-    border-radius: 0px 10px 10px 0px;
-    text-align: center;
-    display: flex;
-    width: 200px;
-    -webkit-box-shadow: 0px 10px 13px -7px #000000, -20px 34px 18px 1px rgba(0,0,0,0); 
-    box-shadow: 0px 10px 13px -7px #000000, -20px 34px 18px 1px rgba(0,0,0,0);
-  }
-
-
-
-  .Box-1 {
-    text-align: start;
-    display: flex;
-  }
-
-  .Box-2 {
-    display: flex;
-    margin-top: 5px;
+.Box {
+  display: flex;
+  padding: $padding--l;
+  position: relative;
+  &--center {
     justify-content: center;
-    margin-left: 35px;
-      @media #{$screen__l} 
-        {margin-top: 10px;
-          margin-left: 0;
-        }
+  }
+  &--left {
+    justify-content: flex-start;
+  }
+  &--right {
+    justify-content: flex-end;
+  }
+}
+
+
+.Box-1 {
+  text-align: start;
+  display: flex;
+}
+
+.Box-2 {
+  display: flex;
+  margin-top: 5px;
+  justify-content: center;
+  margin-left: 35px;
+  @media #{$screen__l} 
+    { margin-top: 10px;
+        margin-left: 0;
+    }
   }
 
+.Box-3 {
+  text-align: end;
+  margin-top: 5px;
+}
 
+.Box--banner--center {
+  height: 250px;
+}
+  
 
-  .Box-3 {
-    text-align: end;
-    margin-top: 5px;
-  }
+.prod-card {
+  bottom: 30px;
+  z-index: 4;
+  position: absolute;
+  width: calc(100% - (#{$padding--l} * 2));
+  background-color: #fff;
+}
 
-
-  .Box {
-      display: flex;
-      padding: $padding--l;
-      position: relative;
-      &--center {
-        justify-content: center;
-      }
-      &--left {
-        justify-content: flex-start;
-      }
-      &--right {
-        justify-content: flex-end;
-      }
-  }
-  .prod-card {
-    bottom: 30px;
-    z-index: 4;
-    position: absolute;
-    width: calc(100% - (#{$padding--l} * 2));
-    background-color: #fff;
-  }
-
-  .Box--banner--center {
-      height: 250px;
-  }
+.prod-img {
+  box-shadow: 12px 13px 13px -10px #000, -20px 26px 4px 12px transparent;
+}
