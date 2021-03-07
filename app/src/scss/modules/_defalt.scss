@@ -4,6 +4,7 @@ $padding--s: 15px;
 $padding--xs: 5px;
 
 $font--s:15px;
+$font--m:23px;
 $font--l:25px;
 $font--lx:37px;
 
@@ -92,14 +93,14 @@ div p {
   justify-content: center;
   margin-left: 35px;
   @media #{$screen__l} 
-    { margin-top: 10px;
+    { margin-top: 20px;
         margin-left: 0;
     }
   }
 
 .Box-3 {
   text-align: end;
-  margin-top: 5px;
+  margin-top: 20px;
 }
 
 .Box--banner--center {
@@ -117,4 +118,27 @@ div p {
 
 .prod-img {
   box-shadow: 12px 13px 13px -10px #000, -20px 26px 4px 12px transparent;
+}
+
+.about-content-box {
+  margin: 0;
+  padding: 50px 15px 70px 15px;
+  max-width: 100%;
+  color: #000;
+  text-align: center;
+  font-size:$font--m;
+    @media #{$screen__l} 
+      { max-width: 50%;}
+}
+
+.content-box {
+  display: flex;
+  justify-content: center;
+}
+
+.About-box {
+  background:linear-gradient(0deg, rgba(241, 241, 241, 1), rgba(241, 241, 241, 0.47)), url('/media/Banner.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }

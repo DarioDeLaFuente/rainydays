@@ -25,10 +25,13 @@
 }
 .Footer-Box-2 {
     display: flex;
-    padding: 15px 5px 5px 5px;
+    padding: 10px 5px 5px 5px;
+    font-size: 10px;
      a {
          color:#fff;
      }
+     @media #{$screen__l} 
+            {font-size: 15px;}
 }
 
 .Footer-Box-3 {

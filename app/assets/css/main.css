@@ -776,12 +776,12 @@ div p {
   margin-left: 35px; }
   @media only screen and (min-width: 1024px) {
     .Box-2 {
-      margin-top: 10px;
+      margin-top: 20px;
       margin-left: 0; } }
 
 .Box-3 {
   text-align: end;
-  margin-top: 5px; }
+  margin-top: 20px; }
 
 .Box--banner--center {
   height: 250px; }
@@ -796,29 +796,128 @@ div p {
 .prod-img {
   box-shadow: 12px 13px 13px -10px #000, -20px 26px 4px 12px transparent; }
 
-/* Style the Navbar */
-.topnav {
-  background-color: #025951;
+.about-content-box {
+  margin: 0;
+  padding: 50px 15px 70px 15px;
+  max-width: 100%;
+  color: #000;
+  text-align: center;
+  font-size: 23px; }
+  @media only screen and (min-width: 1024px) {
+    .about-content-box {
+      max-width: 50%; } }
+
+.content-box {
   display: flex;
   justify-content: center; }
-  .topnav ul {
-    display: flex; }
-  .topnav li {
-    display: flex; }
-  .topnav a {
-    color: #fff;
-    padding: 5px;
-    margin: 0 10px;
-    font-size: 15px; }
-    .topnav a:hover {
-      color: black; }
-    .topnav a.active {
-      background-color: #2196F3;
-      color: white; }
+
+.About-box {
+  background: linear-gradient(0deg, #f1f1f1, rgba(241, 241, 241, 0.47)), url("/media/Banner.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; }
+
+/* Style the Navbar 4 Mobail*/
+.Header {
+  display: none; }
+
+.sidenav.openSidenav {
+  width: 100%; }
+
+.sidenav.closeSidenav {
+  width: 0; }
+
+.openNav {
+  font-size: 30px;
+  cursor: pointer; }
+
+.sidenav {
+  display: flex;
+  justify-content: inherit;
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 8;
+  top: 0;
+  left: 0;
+  background-color: #FFFFFF;
+  overflow-x: hidden;
+  transition: width 0.5s;
+  padding-top: 250px; }
+  @media only screen and (max-height: 450px) {
+    .sidenav {
+      padding-top: 100px; } }
+
+.sidenav a {
+  display: grid;
+  justify-items: end;
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #FFFFFF;
+  background-color: #025951;
+  transition: width 0.3s;
+  margin: 10px; }
+  @media only screen and (max-height: 450px) {
+    .sidenav a {
+      font-size: 18px; } }
+
+.sidenav a:hover {
+  color: #f1f1f1; }
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+  color: #000000;
+  background-color: #FFFFFF; }
+
+.topnav {
+  display: flex;
+  justify-content: flex-end;
+  margin: 10px; }
+
+@media only screen and (min-width: 1024px) {
+  /* Style the Navbar 4 desktop*/
+  .topnav {
+    background-color: #025951;
+    display: flex;
+    justify-content: center;
+    margin: 0; }
+    .topnav ul {
+      display: flex; }
+    .topnav li {
+      display: flex; }
+    .topnav a {
+      color: #fff;
+      padding: 5px;
+      margin: 0 10px;
+      text-decoration: none;
+      font-size: 15px; }
+      .topnav a:hover {
+        color: black; }
+      .topnav a.active {
+        color: white; }
+  .Header {
+    display: block; }
+  .sidenav {
+    background-color: transparent;
+    position: relative;
+    width: auto;
+    padding-top: 0; }
+  .sidenav .closebtn {
+    display: none; }
+  span.openNav {
+    display: none; }
+  .closeSidenav {
+    display: none; } }
 
 /* Style the header */
 .Header {
-  margin: 10px; }
+  margin: 10px;
+  height: 65px; }
 
 .img-bax-baner {
   text-align: center;
@@ -826,29 +925,39 @@ div p {
 
 .img-bax-baner-jackets {
   text-align: center;
-  padding-top: 100px;
-  padding-left: 670px; }
+  padding-top: 25px;
+  padding-left: 15px; }
+  @media only screen and (min-width: 1024px) {
+    .img-bax-baner-jackets {
+      padding-left: 670px;
+      padding-top: 50px; } }
 
 .img-baner {
   width: 150px;
   height: 80px; }
 
 .bannerLink {
-  text-align: center;
-  padding-top: 25px; }
-
-.about-content-box {
-  text-align: center;
-  padding-top: 25px; }
+  display: none; }
+  @media only screen and (min-width: 1024px) {
+    .bannerLink {
+      text-align: center;
+      padding-top: 25px;
+      display: block; } }
 
 .bannerLink a {
   background-color: #fff;
-  padding: 15px;
-  margin-left: 21px; }
+  padding: 15px; }
 
 a.bannerLinkBox {
   color: #000;
-  font-weight: bolder; }
+  font-weight: bolder;
+  font-size: 15px; }
+  @media only screen and (max-width: 320px) {
+    a.bannerLinkBox {
+      font-size: 14px; } }
+  @media only screen and (min-width: 1024px) {
+    a.bannerLinkBox {
+      font-size: 15px; } }
 
 .search-icon {
   display: flex;
@@ -878,27 +987,28 @@ a.bannerLinkBox {
 
 .Box-baner {
   width: 100%;
-  height: 200px; }
+  height: 85px; }
+  @media only screen and (min-width: 1024px) {
+    .Box-baner {
+      height: 200px; } }
 
 .logoBaner {
+  width: 100%;
+  height: 200px; }
+  @media only screen and (min-width: 1024px) {
+    .logoBaner {
+      background-image: url("/media/Banner.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover; } }
+
+.logoBanerProducts {
+  background-image: url("/../media/Jackets_baner.png");
   width: 100%;
   height: 200px;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover; }
-
-.About-logoBaner {
-  opacity: 0.65;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover; }
-
-.about-content-box {
-  margin: 0;
-  padding: 50px 15px 70px 15px;
-  max-width: 50%;
-  color: #000;
-  font-size: 15px; }
 
 .logo {
   max-width: 70%; }
@@ -930,9 +1040,13 @@ a.bannerLinkBox {
 
 .Footer-Box-2 {
   display: flex;
-  padding: 15px 5px 5px 5px; }
+  padding: 10px 5px 5px 5px;
+  font-size: 10px; }
   .Footer-Box-2 a {
     color: #fff; }
+  @media only screen and (min-width: 1024px) {
+    .Footer-Box-2 {
+      font-size: 15px; } }
 
 .Footer-Box-3 {
   display: flex;
@@ -959,15 +1073,21 @@ a.bannerLinkBox {
 .prod-label {
   display: flex;
   z-index: 4;
-  margin-top: 25px;
-  margin-right: 130px;
+  margin-top: 5px;
+  margin-right: 144px;
   position: absolute;
   width: calc(55% - (20px * 1));
   background-color: #8C8303;
   text-transform: uppercase; }
+  @media only screen and (max-width: 320px) {
+    .prod-label {
+      margin-right: 114px; } }
+  @media only screen and (min-width: 768px) {
+    .prod-label {
+      margin-right: 86px; } }
   @media only screen and (min-width: 1024px) {
     .prod-label {
-      margin-left: 21.5px; } }
+      margin-right: 121px; } }
 
 a.prod-label {
   color: #fff;
@@ -975,6 +1095,10 @@ a.prod-label {
   justify-content: center;
   height: 39px;
   font-weight: bold; }
+  @media only screen and (min-width: 768px) {
+    a.prod-label {
+      height: 35px;
+      font-size: 12px; } }
   @media only screen and (min-width: 1024px) {
     a.prod-label {
       height: 35px; } }
@@ -983,19 +1107,39 @@ a.prod-label {
   display: flex;
   filter: brightness(80%);
   position: absolute;
-  bottom: 293px;
-  right: -23px;
-  border: 26px solid #0000;
+  bottom: 319px;
+  right: -11px;
+  border: 20px solid #0000;
   border-left-color: #7C7401;
   box-shadow: inset 0 0 10px #000;
   width: 30px;
   height: 30px; }
+  @media only screen and (max-width: 320px) {
+    .i {
+      bottom: 258px; } }
+  @media only screen and (min-width: 768px) {
+    .i {
+      bottom: 206px; } }
   @media only screen and (min-width: 1024px) {
     .i {
-      bottom: 250px; } }
+      bottom: 276px; } }
 
-a.prod-card {
+a.prod-card-label {
   color: #000; }
+
+.prod-card-label {
+  bottom: 30px;
+  z-index: 4;
+  position: absolute;
+  width: calc(100% - (30px * 2));
+  background-color: #fff; }
+
+.prod-card-label-link {
+  bottom: 30px;
+  z-index: 4;
+  position: absolute;
+  width: calc(100% - (30px * 2));
+  background-color: #fff; }
 
 .form {
   display: flex;
@@ -1064,3 +1208,53 @@ a.prod-card {
   width: 300px;
   font-size: 25px;
   cursor: pointer; }
+
+.box-container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  user-select: none; }
+
+.box-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0; }
+
+.box-container:hover input ~ .checkmark {
+  background-color: #fff; }
+
+.box-container input:checked ~ .checkmark {
+  background-color: #025951; }
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  border: solid 1px #000;
+  border-radius: 25px;
+  background-color: #fff; }
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none; }
+
+.box-container input:checked ~ .checkmark:after {
+  display: block; }
+
+.box-container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg); }
