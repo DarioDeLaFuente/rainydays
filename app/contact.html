@@ -9,42 +9,12 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
 </head>
 <body>
-  <header class="Header">
-    <div class="Container">
-      <div class="Grid Grid--spaceBetween">
-        <div class="Grid-cell--xs-4 Grid-cell--md-4 Grid-cell--lg-4 Grid-cell--xl-2">
-          <div class="Box-1">
-            <a href="index.html">
-                <img src="media/RainyDays_Logo.png" alt="RainyDays_Logo" class="logo">
-            </a>
-          </div>
-        </div>
-        <div class="Grid-cell--xs-4 Grid-cell--md-4 Grid-cell--lg-4 Grid-cell--xl-2">
-          <div class="Box-2">
-            <div class="search-icon">
-              <i class="material-icons">search</i>
-            </div>
-            <div class="searchBar">
-              <input type="text" placeholder="Search for products">
-            </div>
-          </div>
-        </div>
-        <div class="Grid-cell--xs-4 Grid-cell--md-4 Grid-cell--lg-4 Grid-cell--xl-2">
-          <div class="Box-3">
-            <i class="material-icons shopping_cart" >shopping_cart</i>
-          </div>
-        </div>
-      </div>
-    </div>
-  </header><!-- /Header -->
-  <nav class="topnav">
-    <ul>
-      <li><a href="index.html"><i class="material-icons">home</i></a></li>
-      <li><a href="../products/jackets.html">Jackets</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="about.html">About</a></li>
-    </ul>
-  </nav>
+   <!-- /Header -->
+   <header include-html="/components/header.html" class="Header"></header>
+   <!-- /Header -->
+   <!-- /Nav -->
+   <nav include-html="/components/nav.html" class="topnav"></nav>
+   <!-- /Nav -->
   <main class="Main">
     <section class="Section"><!-- /Section -->
       <div class="Container">
@@ -56,32 +26,44 @@
               <input class="email-input" type="email" id="name" placeholder="DarioDelaFuente@test.com">
               <div class="checkbox-container">
                 <div class="form form--left">
-                  <label for="cancel_order">
-                    <input type="checkbox" id="cancel_order">Cancel order
-                    <span class="checkmark"></span>
-                  </label>
-                  <label for="vacancies">
-                    <input type="checkbox" id="vacancies">Vacancies
-                    <span class="checkmark"></span>
-                  </label>
-                  <label for="privacy_and_data_security">
-                    <input type="checkbox" id="privacy_and_data_security">Privacy and data security
-                    <span class="checkmark"></span>
-                  </label>
+                  <div class="box-container">
+                    <label for="cancel_order">
+                      <input type="checkbox" id="cancel_order">Cancel order
+                      <span class="checkmark"></span>
+                    </label>
+                  </div>
+                  <div class="box-container">
+                    <label for="vacancies">
+                      <input type="checkbox" id="vacancies">Vacancies
+                      <span class="checkmark"></span>
+                    </label>
+                  </div>
+                  <div class="box-container">
+                    <label for="privacy_and_data_security">
+                      <input type="checkbox" id="privacy_and_data_security">Privacy and data security
+                      <span class="checkmark"></span>
+                    </label>
+                  </div>
                 </div>
                 <div class="form form--right">
-                  <label for="return_and_exchange">
-                    <input type="checkbox" id="return_and_exchange">Return and exchange
-                    <span class="checkmark"></span>
-                  </label>
-                  <label for="guarantee">
-                    <input type="checkbox" id="guarantee">Guarantee
-                    <span class="checkmark"></span>
-                  </label>
-                  <label for="complaint">
-                    <input type="checkbox" id="complaint">Complaint
-                    <span class="checkmark"></span>
-                  </label>
+                  <div class="box-container">
+                    <label for="return_and_exchange">
+                      <input type="checkbox" id="return_and_exchange">Return and exchange
+                      <span class="checkmark"></span>
+                    </label>
+                  </div>
+                  <div class="box-container">
+                    <label for="guarantee">
+                      <input type="checkbox" id="guarantee">Guarantee
+                      <span class="checkmark"></span>
+                    </label>
+                  </div>
+                  <div class="box-container">
+                    <label for="complaint">
+                      <input type="checkbox" id="complaint">Complaint
+                      <span class="checkmark"></span>
+                    </label>
+                  </div>
                 </div>
               </div>
               <div class="form-button">
@@ -120,40 +102,9 @@
       </div>
     </section><!-- /Section -->
   </main>
-  <footer class="Footer">
-    <div class="Container">
-      <div class="Grid Grid--spaceBetween Grid--gutter-xl"> <!-- Grid--spaceBetween -->
-        <div class="Grid-cell--xs-12 Grid-cell--md-12 Grid-cell--lg-4 Grid-cell--xl-4">
-          <div class="Footer-Box-1">
-            <img src="media/RainyDays_Logo.png" alt="RainyDays_Logo" class="Footer-logo">
-          </div>
-        </div>
-        <div class="Grid-cell--xs-12 Grid-cell--md-12 Grid-cell--lg-4 Grid-cell--xl-4">
-          <div class="Footer-Box-2">
-            <ul>
-              <li><a href="#">Click here to see our advertised items >></a></li>
-              <li><a href="#">Click here to see our advertised items >></a></li>
-              <li><a href="#">Click here to see our advertised items >></a></li>
-              <li><a href="#">Click here to see our advertised items >></a></li>
-            </ul>
-          </div>
-          <div class="Footer-Box-2">
-            <ul>
-              <li><a href="#">Click here to see our advertised items >></a></li>
-              <li><a href="#">Click here to see our advertised items >></a></li>
-              <li><a href="#">Click here to see our advertised items >></a></li>
-              <li><a href="#">Click here to see our advertised items >></a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="Grid-cell--xs-12 Grid-cell--md-12 Grid-cell--lg-4 Grid-cell--xl-4">
-          <div class="Footer-Box-3">
-            #
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer><!-- /Footer -->
+ <!-- /Footer -->
+ <footer include-html="/components/footer.html" class="Footer"></footer>
+ <!-- /Footer -->
   <script src="scripts/functios.js"></script>
 </body>
 </html>

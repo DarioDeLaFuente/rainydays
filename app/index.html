@@ -9,48 +9,18 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
 </head>
 <body>
-  <header class="Header">
-    <div class="Container">
-      <div class="Grid Grid--spaceBetween">
-        <div class="Grid-cell--xs-4 Grid-cell--md-4 Grid-cell--lg-4 Grid-cell--xl-2">
-          <div class="Box-1">
-            <a href="index.html">
-              <img src="media/RainyDays_Logo.png" alt="RainyDays_Logo" class="logo">
-            </a>
-          </div>
-        </div>
-        <div class="Grid-cell--xs-4 Grid-cell--md-4 Grid-cell--lg-4 Grid-cell--xl-2">
-          <div class="Box-2">
-            <div class="search-icon">
-              <i class="material-icons">search</i>
-            </div>
-            <div class="searchBar">
-              <input type="text" placeholder="Search for products">
-            </div>
-          </div>
-        </div>
-        <div class="Grid-cell--xs-4 Grid-cell--md-4 Grid-cell--lg-4 Grid-cell--xl-2">
-          <div class="Box-3">
-            <i class="material-icons shopping_cart" >shopping_cart</i>
-          </div>
-        </div>
-      </div>
-    </div>
-  </header><!-- /Header -->
-  <nav class="topnav">
-    <ul>
-      <li><a href="index.html"><i class="material-icons">home</i></a></li>
-      <li><a href="products/jackets.html">Jackets</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="about.html">About</a></li>
-    </ul>
-  </nav>
+  <!-- /Header -->
+  <header include-html="/components/header.html" class="Header"></header>
+  <!-- /Header -->
+  <!-- /Nav -->
+  <nav include-html="/components/nav.html" class="topnav"></nav>
+  <!-- /Nav -->
   <main class="Main">
     <section class="Section">
       <div class="Container">
         <div class="Grid">
           <div class="Box-baner">
-            <div class="logoBaner" style="background-image: url('media/Banner.png');">
+            <div class="logoBaner">
               <div class="img-bax-baner">
                 <img src="media/RainyDays_Logo.png" alt="RainyDays_Logo" class="img-baner">
               </div>
@@ -66,14 +36,14 @@
         <div class="Grid ">
           <div class="Grid-cell--xs-12 Grid-cell--md-6 Grid-cell--lg-4 ">
             <div class="Box Box--left">
-              <img src="media/Jacket_1.png" class="prod-img">
+              <img src="media/Jacket_1.png" class="prod-img" alt="products img of a jacket">
               <div class="prod-box">
                 <a class="prod-label" href="#">
                   <p>Only on online</p>
                 </a>
               </div>
               <i class="i"></i>
-              <a class="prod-card" href="#">
+              <a class="prod-card-label" href="#">
                 <p>Pushing</p>
                 <p>TM</p>
                 <p>Men’s rain jacket</p>
@@ -83,14 +53,14 @@
           </div>
           <div class="Grid-cell--xs-12 Grid-cell--md-6 Grid-cell--lg-4">
             <div class="Box Box--center">
-              <img src="media/Jacket_1.png" class="prod-img">
+              <img src="media/Jacket_1.png" class="prod-img" alt="products img of a jacket">
               <div class="prod-box">
                 <a class="prod-label" href="#">
                   <p>Only on online</p>
                 </a>
               </div>
               <i class="i"></i>
-              <a class="prod-card" href="#">
+              <a class="prod-card-label" href="#">
                 <p>Pushing</p>
                 <p>TM</p>
                 <p>Men’s rain jacket</p>
@@ -100,14 +70,14 @@
           </div>
           <div class="Grid-cell--xs-12 Grid-cell--md-6 Grid-cell--lg-4">
             <div class="Box Box--right">
-              <img src="media/Jacket_1.png" class="prod-img">
+              <img src="media/Jacket_1.png" class="prod-img" alt="products img of a jacket">
               <div class="prod-box">
                 <a class="prod-label" href="#">
                   <p>Only on online</p>
                 </a>
               </div>
               <i class="i"></i>
-              <a class="prod-card" href="#">
+              <a class="prod-card-label" href="#">
                 <p>Pushing</p>
                 <p>TM</p>
                 <p>Men’s rain jacket</p>
@@ -123,20 +93,20 @@
         <div class="Grid ">
           <div class="Grid-cell--xs-12 Grid-cell--md-6 Grid-cell--lg-4 ">
             <div class="Box Box--left">
-              <img src="media/BannerLink1.png" class="prod-img">
-              <a class="prod-card" href="#">#1</a>
+              <img src="media/BannerLink1.png" class="prod-img" alt="link img">
+              <a class="prod-card-label-link" href="#">#1</a>
             </div>
           </div>
           <div class="Grid-cell--xs-12 Grid-cell--md-6 Grid-cell--lg-4">
             <div class="Box Box--center">
-              <img src="media/BannerLink2.png" class="prod-img">
-              <a class="prod-card" href="#">#2"</a>
+              <img src="media/BannerLink2.png" class="prod-img" alt="link img">
+              <a class="prod-card-label-link" href="#">#2"</a>
             </div>
           </div>
           <div class="Grid-cell--xs-12 Grid-cell--md-6 Grid-cell--lg-4">
             <div class="Box Box--right">
-              <img src="media/BannerLink3.png" class="prod-img">
-              <a class="prod-card" href="#">#3</a>
+              <img src="media/BannerLink3.png" class="prod-img" alt="link img">
+              <a class="prod-card-label-link" href="#">#3</a>
             </div>
           </div>
         </div>
@@ -147,48 +117,17 @@
         <div class="Grid">
           <div class="Grid-cell--xs-12">
             <div class="Box Box--banner--center">
-              <img src="media/SBBannerLink4.png" class="prod-img">
-              <a class="prod-card" href="#">#1</a>
+              <img src="media/SBBannerLink4.png" class="prod-img" alt="link img">
+              <a class="prod-card-label-link" href="#">#1</a>
             </div>
           </div>
         </div>
       </div>
     </section><!-- /Section -->
   </main>
-  <footer class="Footer">
-    <div class="Container">
-      <div class="Grid Grid--spaceBetween Grid--gutter-xl"> <!-- Grid--spaceBetween -->
-        <div class="Grid-cell--xs-12 Grid-cell--md-12 Grid-cell--lg-4 Grid-cell--xl-4">
-          <div class="Footer-Box-1">
-            <img src="media/RainyDays_Logo.png" alt="RainyDays_Logo" class="Footer-logo">
-          </div>
-        </div>
-        <div class="Grid-cell--xs-12 Grid-cell--md-12 Grid-cell--lg-4 Grid-cell--xl-4">
-          <div class="Footer-Box-2">
-            <ul>
-              <li><a href="#">Click here to see our advertised items >></a></li>
-              <li><a href="#">Click here to see our advertised items >></a></li>
-              <li><a href="#">Click here to see our advertised items >></a></li>
-              <li><a href="#">Click here to see our advertised items >></a></li>
-            </ul>
-          </div>
-          <div class="Footer-Box-2">
-            <ul>
-              <li><a href="#">Click here to see our advertised items >></a></li>
-              <li><a href="#">Click here to see our advertised items >></a></li>
-              <li><a href="#">Click here to see our advertised items >></a></li>
-              <li><a href="#">Click here to see our advertised items >></a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="Grid-cell--xs-12 Grid-cell--md-12 Grid-cell--lg-4 Grid-cell--xl-4">
-          <div class="Footer-Box-3">
-            #
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer><!-- /Footer -->
+  <!-- /Footer -->
+  <footer include-html="/components/footer.html" class="Footer"></footer>
+  <!-- /Footer -->
   <script src="scripts/functios.js"></script>
 </body>
 </html>

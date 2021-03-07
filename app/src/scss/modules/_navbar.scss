@@ -1,8 +1,82 @@
-/* Style the Navbar */
+/* Style the Navbar 4 Mobail*/
+.Header {
+  display: none;
+}
+
+.sidenav.openSidenav{
+  width: 100%;
+}
+
+.sidenav.closeSidenav{
+  width: 0;
+}
+
+.openNav {
+  font-size:30px;
+  cursor:pointer;
+}
+
+.sidenav {
+  display: flex;
+  justify-content: inherit;
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 8;
+  top: 0;
+  left: 0;
+  background-color: #FFFFFF;
+  overflow-x: hidden;
+  transition: width 0.5s;
+  padding-top: 250px;
+  @media #{$screen__nbxs }
+  {padding-top: 100px;} 
+}
+
+.sidenav a {
+  //display: block;
+  display: grid;
+  justify-items: end;
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #FFFFFF;
+  background-color: #025951;
+  transition: width 0.3s;
+  margin: 10px;
+  @media #{$screen__nbxs }
+  {font-size: 18px;} 
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+  color: #000000;
+  background-color: #FFFFFF;
+}
+
+.topnav {
+  display: flex;
+  justify-content: flex-end;
+  margin: 10px;
+}
+
+
+
+@media #{$screen__l} {
+  /* Style the Navbar 4 desktop*/
   .topnav {
     background-color: #025951;
     display: flex;
     justify-content: center;
+    margin: 0;
     ul {
       display: flex;
     }
@@ -13,18 +87,36 @@
       color: #fff;
       padding: 5px;
       margin: 0 10px;
+      text-decoration: none;
       font-size: 15px;
       &:hover {
         color: black;
       }
       &.active {
-        background-color: #2196F3;
         color: white;
       }
     }
   }
- 
 
-
+  .Header {
+    display: block;
+  }
   
-
+  .sidenav {
+    background-color: transparent;
+    position: relative;
+    width: auto;
+    padding-top: 0;
+  }
+  .sidenav .closebtn {
+    display: none;
+  }
+  
+  span.openNav{
+    display: none;
+  }
+  .closeSidenav{
+    display: none;
+  }
+  
+}
