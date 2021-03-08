@@ -1073,7 +1073,7 @@ a.bannerLinkBox {
 .prod-label {
   display: flex;
   z-index: 4;
-  margin-top: 5px;
+  margin-top: 20px;
   margin-right: 144px;
   position: absolute;
   width: calc(55% - (20px * 1));
@@ -1107,7 +1107,7 @@ a.prod-label {
   display: flex;
   filter: brightness(80%);
   position: absolute;
-  bottom: 319px;
+  bottom: 304px;
   right: -11px;
   border: 20px solid #0000;
   border-left-color: #7C7401;
@@ -1116,13 +1116,41 @@ a.prod-label {
   height: 30px; }
   @media only screen and (max-width: 320px) {
     .i {
-      bottom: 258px; } }
+      bottom: 242px; } }
   @media only screen and (min-width: 768px) {
     .i {
-      bottom: 206px; } }
+      bottom: 190px; } }
   @media only screen and (min-width: 1024px) {
     .i {
-      bottom: 276px; } }
+      bottom: 261px; } }
+
+h4 {
+  grid-area: h4; }
+
+h3 {
+  grid-area: h3; }
+
+p {
+  grid-area: p; }
+
+.pclBox {
+  display: grid;
+  grid-gap: 0.5rem;
+  padding: 5px;
+  grid-template-rows: auto 1fr;
+  grid-template-areas: 'h3 p' 'h4 p'; }
+
+.pclBox p {
+  font-size: 25px;
+  font-weight: bold; }
+
+.pclBox h3 {
+  font-size: 25px;
+  font-weight: bold; }
+
+.pclBox h4 {
+  font-size: 15px;
+  font-weight: bold; }
 
 a.prod-card-label {
   color: #000; }
@@ -1134,12 +1162,65 @@ a.prod-card-label {
   width: calc(100% - (30px * 2));
   background-color: #fff; }
 
-.prod-card-label-link {
-  bottom: 30px;
+.prod-card-label-box {
+  display: flex;
+  justify-content: flex-end; }
+
+.prod-card-label-link-1 {
+  bottom: 188px;
   z-index: 4;
   position: absolute;
-  width: calc(100% - (30px * 2));
-  background-color: #fff; }
+  margin-right: 110px;
+  padding: 10px 10px;
+  background-color: #0000;
+  border: solid 1px #000; }
+
+.prod-card-label-link-2 {
+  bottom: 188px;
+  z-index: 4;
+  position: absolute;
+  margin-right: 110px;
+  padding: 10px 10px;
+  background-color: #0000;
+  border: solid 1px #000; }
+
+.prod-card-label-link-3 {
+  bottom: 195px;
+  z-index: 4;
+  position: absolute;
+  margin-right: 110px;
+  padding: 10px 10px;
+  background-color: #0000;
+  border: solid 1px #000; }
+
+.prod-card-label-link-4 {
+  bottom: 90px;
+  z-index: 4;
+  position: absolute;
+  margin-right: 70px;
+  padding: 20px 20px;
+  background-color: #0000;
+  border: solid 1px #000; }
+
+a.prod-card-label-link-1 {
+  color: #000;
+  font-size: 15px;
+  font-weight: bold; }
+
+a.prod-card-label-link-2 {
+  color: #000;
+  font-size: 15px;
+  font-weight: bold; }
+
+a.prod-card-label-link-3 {
+  color: #000;
+  font-size: 15px;
+  font-weight: bold; }
+
+a.prod-card-label-link-4 {
+  color: #000;
+  font-size: 25px;
+  font-weight: bold; }
 
 .form {
   display: flex;
