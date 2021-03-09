@@ -1145,12 +1145,18 @@ p {
   font-weight: bold; }
 
 .pclBox h3 {
-  font-size: 25px;
+  font-size: 19px;
   font-weight: bold; }
+  @media only screen and (min-width: 1024px) {
+    .pclBox h3 {
+      font-size: 25px; } }
 
 .pclBox h4 {
-  font-size: 15px;
+  font-size: 12px;
   font-weight: bold; }
+  @media only screen and (min-width: 1024px) {
+    .pclBox h4 {
+      font-size: 15px; } }
 
 a.prod-card-label {
   color: #000; }
@@ -1167,31 +1173,55 @@ a.prod-card-label {
   justify-content: flex-end; }
 
 .prod-card-label-link-1 {
-  bottom: 188px;
+  bottom: 200px;
   z-index: 4;
   position: absolute;
-  margin-right: 110px;
+  margin-right: 155px;
   padding: 10px 10px;
   background-color: #0000;
   border: solid 1px #000; }
+  @media only screen and (min-width: 768px) {
+    .prod-card-label-link-1 {
+      bottom: 138px;
+      margin-right: 60px; } }
+  @media only screen and (min-width: 1024px) {
+    .prod-card-label-link-1 {
+      bottom: 188px;
+      margin-right: 120px; } }
 
 .prod-card-label-link-2 {
-  bottom: 188px;
+  bottom: 200px;
   z-index: 4;
   position: absolute;
-  margin-right: 110px;
+  margin-right: 155px;
   padding: 10px 10px;
   background-color: #0000;
   border: solid 1px #000; }
+  @media only screen and (min-width: 768px) {
+    .prod-card-label-link-2 {
+      bottom: 138px;
+      margin-right: 60px; } }
+  @media only screen and (min-width: 1024px) {
+    .prod-card-label-link-2 {
+      bottom: 188px;
+      margin-right: 120px; } }
 
 .prod-card-label-link-3 {
-  bottom: 195px;
+  bottom: 200px;
   z-index: 4;
   position: absolute;
-  margin-right: 110px;
+  margin-right: 155px;
   padding: 10px 10px;
   background-color: #0000;
   border: solid 1px #000; }
+  @media only screen and (min-width: 768px) {
+    .prod-card-label-link-3 {
+      bottom: 138px;
+      margin-right: 60px; } }
+  @media only screen and (min-width: 1024px) {
+    .prod-card-label-link-3 {
+      bottom: 188px;
+      margin-right: 120px; } }
 
 .prod-card-label-link-4 {
   bottom: 90px;
@@ -1201,6 +1231,14 @@ a.prod-card-label {
   padding: 20px 20px;
   background-color: #0000;
   border: solid 1px #000; }
+  @media only screen and (min-width: 768px) {
+    .prod-card-label-link-4 {
+      bottom: 90px;
+      margin-right: 40px; } }
+  @media only screen and (min-width: 1024px) {
+    .prod-card-label-link-4 {
+      bottom: 90px;
+      margin-right: 60px; } }
 
 a.prod-card-label-link-1 {
   color: #000;
