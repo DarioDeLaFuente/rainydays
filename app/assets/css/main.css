@@ -1016,34 +1016,64 @@ a.bannerLinkBox {
     .logo {
       max-width: 40%; } }
 
+.grid-container {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas: "FBox-4 FBox-4" "FBox-5 FBox-6"; }
+
+.FBox-4 {
+  grid-area: FBox-4; }
+
+.FBox-5 {
+  grid-area: FBox-5; }
+
+.FBox-6 {
+  grid-area: FBox-6; }
+
+.cb-grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas: "CBox-1 CBox-2" "CBox-1 CBox-2"; }
+
+.CBox-1 {
+  grid-area: CBox-1; }
+
+.CBox-2 {
+  grid-area: CBox-2; }
+
 .Footer {
   display: flex;
   flex-direction: row;
   background-color: #025951;
-  color: #fff;
-  width: auto;
-  height: auto; }
+  color: #fff; }
 
 .Footer-logo {
   display: flex;
   background-color: #fff;
-  width: 80%;
-  height: auto;
-  padding: 20px; }
+  width: 70%;
+  padding: 25px; }
   @media (max-width: 600px) {
     .Footer-logo {
-      width: 100%; } }
+      width: 70%; } }
 
 .Footer-Box-1 {
   display: flex;
-  padding: 5px; }
+  margin: 10px;
+  justify-content: center;
+  background-color: #fff; }
 
 .Footer-Box-2 {
   display: flex;
-  padding: 10px 5px 5px 5px;
+  margin: 35px;
+  padding: 50px 5px 5px 5px;
   font-size: 10px; }
   .Footer-Box-2 a {
-    color: #fff; }
+    color: #fff;
+    padding: 10px 5px 5px 5px; }
   @media only screen and (min-width: 1024px) {
     .Footer-Box-2 {
       font-size: 15px; } }
@@ -1054,15 +1084,36 @@ a.bannerLinkBox {
 
 .FBox-1 {
   display: flex;
-  width: 300px; }
+  margin: 10px;
+  width: 50%; }
+  .FBox-1 li {
+    margin: 20px; }
+  .FBox-1 a {
+    margin: 10px; }
 
-.FBox-3 {
+.FBox-2 {
   display: flex;
-  width: 300px; }
+  margin: 10px;
+  width: 50%; }
+  .FBox-2 li {
+    margin: 20px; }
+  .FBox-2 a {
+    margin-top: 10px; }
 
 .FBox-4 {
-  display: flex;
-  width: 300px; }
+  display: flex; }
+
+.FBox-4 {
+  display: flex; }
+
+.FBox-4 {
+  display: flex; }
+
+.FBox-4 {
+  display: flex; }
+
+.FBox-4 {
+  display: flex; }
 
 /* imports */
 .prod-box {
