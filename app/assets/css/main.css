@@ -1016,12 +1016,27 @@ a.bannerLinkBox {
     .logo {
       max-width: 40%; } }
 
+.Footer {
+  display: none; }
+  @media only screen and (max-width: 320px) {
+    .Footer {
+      display: none; } }
+  @media only screen and (min-width: 768px) {
+    .Footer {
+      display: none; } }
+  @media only screen and (min-width: 1024px) {
+    .Footer {
+      display: flex;
+      flex-direction: row;
+      background-color: #025951; } }
+
 .grid-container {
   display: grid;
-  grid-template-columns: 0.9fr 1.1fr;
+  width: 100%;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   gap: 0px 0px;
-  grid-template-areas: "FBox-4 FBox-4" "FBox-5 FBox-6"; }
+  grid-template-areas: "FBox-4 FBox-4 FBox-4 FBox-4" "FBox-5 FBox-5-a FBox-6 FBox-6"; }
 
 .FBox-4 {
   grid-area: FBox-4; }
@@ -1029,11 +1044,15 @@ a.bannerLinkBox {
 .FBox-5 {
   grid-area: FBox-5; }
 
+.FBox-5-a {
+  grid-area: FBox-5-a; }
+
 .FBox-6 {
   grid-area: FBox-6; }
 
 .cb-grid-container {
   display: grid;
+  width: 100%;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   gap: 0px 0px;
@@ -1045,42 +1064,55 @@ a.bannerLinkBox {
 .CBox-2 {
   grid-area: CBox-2; }
 
-.Footer {
-  display: flex;
-  flex-direction: row;
-  background-color: #025951;
-  color: #fff; }
+.sb-grid-container {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-template-areas: "SBox-1"; }
+
+.SBox-1 {
+  grid-area: SBox-1; }
 
 .Footer-logo {
   display: flex;
   background-color: #fff;
-  width: 70%;
-  padding: 25px; }
+  padding: 50px;
+  width: 80%; }
   @media (max-width: 600px) {
     .Footer-logo {
-      width: 70%; } }
+      width: 100%; } }
 
 .Footer-Box-1 {
   display: flex;
-  margin: 10px;
-  justify-content: center;
-  background-color: #fff; }
+  margin: 10px; }
 
 .Footer-Box-2 {
   display: flex;
-  margin: 35px;
-  padding: 50px 5px 5px 5px;
+  padding-top: 50px;
   font-size: 10px; }
+  .Footer-Box-2 li {
+    padding-top: 10px; }
   .Footer-Box-2 a {
-    color: #fff;
-    padding: 10px 5px 5px 5px; }
+    color: #fff; }
   @media only screen and (min-width: 1024px) {
     .Footer-Box-2 {
-      font-size: 15px; } }
+      font-size: 15px;
+      padding: 90px 0px 0px 0px; } }
 
 .Footer-Box-3 {
   display: flex;
-  padding: 5px; }
+  padding-top: 40px;
+  font-size: 10px; }
+  .Footer-Box-3 a {
+    color: #fff;
+    border: solid 1px #fff;
+    padding: 10px; }
+  @media only screen and (min-width: 1024px) {
+    .Footer-Box-3 {
+      font-size: 15px;
+      padding: 100px 50px 5px 50px; } }
 
 .FBox-1 {
   display: flex;
@@ -1100,20 +1132,25 @@ a.bannerLinkBox {
   .FBox-2 a {
     margin-top: 10px; }
 
-.FBox-4 {
-  display: flex; }
+.FBox-5 {
+  padding-top: 65px; }
 
-.FBox-4 {
-  display: flex; }
+.FBox-5-a {
+  padding-top: 65px; }
 
-.FBox-4 {
-  display: flex; }
+.FBox-6 {
+  padding-top: 39px; }
 
-.FBox-4 {
-  display: flex; }
+.bannerLinkBox-1 {
+  text-transform: uppercase; }
 
-.FBox-4 {
-  display: flex; }
+a.bannerLinkBox-4 {
+  border: none;
+  font-weight: bold; }
+
+.FB-arrow .material-icons {
+  color: #fff;
+  font-size: 30px !important; }
 
 /* imports */
 .prod-box {
