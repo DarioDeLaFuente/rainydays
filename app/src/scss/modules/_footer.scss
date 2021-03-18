@@ -1,54 +1,105 @@
 .Footer {
-    display: none;
-    @media #{$screen__xs} 
-    {display: none;}
-    @media #{$screen__m} 
-    {display: none;}
-    @media #{$screen__l} 
-    {
+    //display: none;
+    //@media #{$screen__xs} 
+    //{display: none;}
+    //@media #{$screen__m} 
+    //{display: none;}
+    //@media #{$screen__l} 
+    //{
     display: flex;
     flex-direction: row;
     background-color:#025951;
-    }  
+    //}  
 }
 
 .grid-container {
     display: grid;
     width: 100%;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: 0px 0px;
+    height: 100%;
+    //grid-template-columns: 1fr 1fr 1fr 1fr;
+    //grid-template-rows: 1fr 1fr;
+    //gap: 0px 0px;
     grid-template-areas:
       "FBox-4 FBox-4 FBox-4 FBox-4"
       "FBox-5 FBox-5-a FBox-6 FBox-6";
   }
-  .FBox-4 { grid-area: FBox-4; }
-  .FBox-5 { grid-area: FBox-5; }
-  .FBox-5-a { grid-area: FBox-5-a; }
-  .FBox-6 { grid-area: FBox-6; }
+  .FBox-4 { 
+      grid-area: FBox-4;
+      place-self: center;
+      a {
+        color: #fff;
+        font-size: 14px;
+        border: solid 1px;
+        padding: 5px;
+    }
+     }
+  .FBox-5 { 
+      grid-area: FBox-5;
+      place-self: center;
+      padding-top: 65px;
+      a {
+        color: #fff;
+        border: solid 1px;
+        padding: 5px;
+    }
+     }
+  .FBox-5-a { 
+      grid-area: FBox-5-a;
+      place-self: center;
+      padding-top: 65px;
+      a {
+        color: #fff;
+        border: solid 1px;
+        padding: 5px;
+    }
+     }
+  .FBox-6 { 
+      grid-area: FBox-6;
+      place-self: center;
+      padding-top: 39px;
+      a {
+        color: #fff;
+    }
+     }
 
   .cb-grid-container {
     display: grid;
     width: 100%;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: 0px 0px;
+    height: 100%;
+    //grid-template-columns: 1fr 1fr;
+    //grid-template-rows: 1fr 1fr;
+    //gap: 0px 0px;
+    //justify-self: center;
     grid-template-areas:
       "CBox-1 CBox-2"
       "CBox-1 CBox-2";
   }
   
-  .CBox-1 { grid-area: CBox-1;}
+  .CBox-1 { 
+      grid-area: CBox-1;
+      place-self: center;
+      a {
+        color: #fff;
+      }
+    }
+    
   
-  .CBox-2 { grid-area: CBox-2; }
+  .CBox-2 { 
+      grid-area: CBox-2; 
+      place-self: center;
+      a {
+        color: #fff;
+      }
+    }
   
   
   .sb-grid-container {
     display: grid;
     width: 100%;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-    gap: 0px 0px;
+    height: 100%;
+    //grid-template-columns: 1fr;
+    //grid-template-rows: 1fr;
+    //gap: 0px 0px;
     grid-template-areas:
       "SBox-1";
   }
@@ -61,9 +112,10 @@
     display: flex;
     background-color: #fff;
     padding: 50px;
-    width: 80%;
-        @media (max-width: 600px) {
-            width: 100%;
+    margin: 10px;
+    width: 90%;
+       @media (max-width: 600px) {
+            width: 95%;
         }
 }
 
@@ -81,11 +133,11 @@
     a {
         color:#fff;
     }
-    @media #{$screen__l} 
-    {
-        font-size: 15px;
-        padding: 90px 0px 0px 0px;
-    }
+    //@media #{$screen__l} 
+    //{
+    //    font-size: 15px;
+    //    padding: 90px 0px 0px 0px;
+    //}
 }
 
 .Footer-Box-3 {
@@ -97,11 +149,11 @@
         border: solid 1px #fff;
         padding: 10px;
     }
-    @media #{$screen__l} 
-    {
-        font-size: 15px;
-        padding: 100px 50px 5px 50px;
-    }
+    //@media #{$screen__l} 
+    //{
+    //    font-size: 15px;
+    //    padding: 100px 50px 5px 50px;
+    //}
 }
 
 
@@ -128,15 +180,6 @@
     }
 }
 
-.FBox-5 { 
-    padding-top: 65px;
-}
-.FBox-5-a { 
-    padding-top: 65px;
-}
-.FBox-6 { 
-    padding-top: 39px;
-}
 
 .bannerLinkBox-1 {
     text-transform: uppercase;
