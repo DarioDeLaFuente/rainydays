@@ -1017,59 +1017,72 @@ a.bannerLinkBox {
       max-width: 40%; } }
 
 .Footer {
-  display: none; }
-  @media only screen and (max-width: 320px) {
-    .Footer {
-      display: none; } }
-  @media only screen and (min-width: 768px) {
-    .Footer {
-      display: none; } }
-  @media only screen and (min-width: 1024px) {
-    .Footer {
-      display: flex;
-      flex-direction: row;
-      background-color: #025951; } }
+  display: flex;
+  flex-direction: row;
+  background-color: #025951; }
 
 .grid-container {
   display: grid;
   width: 100%;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  gap: 0px 0px;
+  height: 100%;
   grid-template-areas: "FBox-4 FBox-4 FBox-4 FBox-4" "FBox-5 FBox-5-a FBox-6 FBox-6"; }
 
 .FBox-4 {
-  grid-area: FBox-4; }
+  grid-area: FBox-4;
+  place-self: center; }
+  .FBox-4 a {
+    color: #fff;
+    font-size: 14px;
+    border: solid 1px;
+    padding: 5px; }
 
 .FBox-5 {
-  grid-area: FBox-5; }
+  grid-area: FBox-5;
+  place-self: center;
+  padding-top: 65px; }
+  .FBox-5 a {
+    color: #fff;
+    border: solid 1px;
+    padding: 5px; }
 
 .FBox-5-a {
-  grid-area: FBox-5-a; }
+  grid-area: FBox-5-a;
+  place-self: center;
+  padding-top: 65px; }
+  .FBox-5-a a {
+    color: #fff;
+    border: solid 1px;
+    padding: 5px; }
 
 .FBox-6 {
-  grid-area: FBox-6; }
+  grid-area: FBox-6;
+  place-self: center;
+  padding-top: 39px; }
+  .FBox-6 a {
+    color: #fff; }
 
 .cb-grid-container {
   display: grid;
   width: 100%;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  gap: 0px 0px;
+  height: 100%;
   grid-template-areas: "CBox-1 CBox-2" "CBox-1 CBox-2"; }
 
 .CBox-1 {
-  grid-area: CBox-1; }
+  grid-area: CBox-1;
+  place-self: center; }
+  .CBox-1 a {
+    color: #fff; }
 
 .CBox-2 {
-  grid-area: CBox-2; }
+  grid-area: CBox-2;
+  place-self: center; }
+  .CBox-2 a {
+    color: #fff; }
 
 .sb-grid-container {
   display: grid;
   width: 100%;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
-  gap: 0px 0px;
+  height: 100%;
   grid-template-areas: "SBox-1"; }
 
 .SBox-1 {
@@ -1079,10 +1092,11 @@ a.bannerLinkBox {
   display: flex;
   background-color: #fff;
   padding: 50px;
-  width: 80%; }
+  margin: 10px;
+  width: 90%; }
   @media (max-width: 600px) {
     .Footer-logo {
-      width: 100%; } }
+      width: 95%; } }
 
 .Footer-Box-1 {
   display: flex;
@@ -1096,10 +1110,6 @@ a.bannerLinkBox {
     padding-top: 10px; }
   .Footer-Box-2 a {
     color: #fff; }
-  @media only screen and (min-width: 1024px) {
-    .Footer-Box-2 {
-      font-size: 15px;
-      padding: 90px 0px 0px 0px; } }
 
 .Footer-Box-3 {
   display: flex;
@@ -1109,10 +1119,6 @@ a.bannerLinkBox {
     color: #fff;
     border: solid 1px #fff;
     padding: 10px; }
-  @media only screen and (min-width: 1024px) {
-    .Footer-Box-3 {
-      font-size: 15px;
-      padding: 100px 50px 5px 50px; } }
 
 .FBox-1 {
   display: flex;
@@ -1131,15 +1137,6 @@ a.bannerLinkBox {
     margin: 20px; }
   .FBox-2 a {
     margin-top: 10px; }
-
-.FBox-5 {
-  padding-top: 65px; }
-
-.FBox-5-a {
-  padding-top: 65px; }
-
-.FBox-6 {
-  padding-top: 39px; }
 
 .bannerLinkBox-1 {
   text-transform: uppercase; }
