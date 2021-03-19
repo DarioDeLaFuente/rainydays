@@ -16,9 +16,9 @@
     display: grid;
     width: 100%;
     height: 100%;
-    //grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     //grid-template-rows: 1fr 1fr;
-    //gap: 0px 0px;
+    gap: 0px 0px;
     grid-template-areas:
       "FBox-4 FBox-4 FBox-4 FBox-4"
       "FBox-5 FBox-5-a FBox-6 FBox-6";
@@ -31,6 +31,7 @@
         font-size: 14px;
         border: solid 1px;
         padding: 5px;
+        display: block;
     }
      }
   .FBox-5 { 
@@ -66,29 +67,39 @@
     display: grid;
     width: 100%;
     height: 100%;
-    //grid-template-columns: 1fr 1fr;
-    //grid-template-rows: 1fr 1fr;
-    //gap: 0px 0px;
+    //grid-template-columns: 1fr;//1fr
+    //grid-template-rows: 1fr 1fr ; //1fr
+    gap: 5px 5px;
     //justify-self: center;
-    grid-template-areas:
-      "CBox-1 CBox-2"
-      "CBox-1 CBox-2";
+    //grid-template-areas:
+      //"CBox-1 CBox-2";  
+      //"CBox-1 CBox-2";
+      @media #{$screen__l} 
+    {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr ; //1fr
+    }
+    li {
+        padding-top:5px;
+    }
   }
   
   .CBox-1 { 
-      grid-area: CBox-1;
+      //grid-area: CBox-1;
       place-self: center;
       a {
         color: #fff;
+        padding-top: 5px;
       }
     }
     
   
   .CBox-2 { 
-      grid-area: CBox-2; 
+      //grid-area: CBox-2; 
       place-self: center;
       a {
         color: #fff;
+        padding: 5px;
       }
     }
   
@@ -191,7 +202,10 @@ a.bannerLinkBox-4 {
 }
 .FB-arrow .material-icons {
     color: #fff;
-    font-size: 30px !important;
+    @media #{$screen__l} 
+    {
+        font-size: 30px !important;
+    }
 }
 
 
