@@ -1,9 +1,9 @@
 /**
  * Description: Load data from the server and place the returned HTML into the matched elements. .load()
  */
-$( ".Header" ).load( "../components/header.html" );
+$( ".header" ).load( "../components/header.html" );
 $( ".topnav" ).load( "../components/nav.html" );
-$( ".Footer" ).load( "../components/footer.html" );
+$( ".footer" ).load( "../components/footer.html" );
 
 
 

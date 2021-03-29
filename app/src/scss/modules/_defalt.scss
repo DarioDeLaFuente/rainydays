@@ -1,4 +1,4 @@
-$Container: 1000px;
+$container: 1000px;
 $padding--l: 30px;
 $padding--s: 15px;
 $padding--xs: 5px;
@@ -59,14 +59,14 @@ div p {
   font-size: 20px !important;
 }
 
-.Content {
-  max-width:$Container;
+.content {
+  max-width:$container;
   margin: auto;
   padding-top: 5px;
   overflow: hidden;
 }
 
-.Box {
+.box {
   display: flex;
   padding: $padding--l;
   position: relative;
@@ -82,12 +82,12 @@ div p {
 }
 
 
-.Box-1 {
+.box-1 {
   text-align: start;
   display: flex;
 }
 
-.Box-2 {
+.box-2 {
   display: flex;
   margin-top: 5px;
   justify-content: center;
@@ -98,12 +98,12 @@ div p {
     }
   }
 
-.Box-3 {
+.box-3 {
   text-align: end;
   margin-top: 20px;
 }
 
-.Box--banner--center {
+.box--banner--center {
   height: 250px;
 }
   
@@ -126,7 +126,7 @@ div p {
   max-width: 100%;
   color: #000;
   text-align: center;
-  font-size:$font--m;
+  //font-size:$font--m;
     @media #{$screen__l} 
       { max-width: 50%;}
 }
@@ -136,7 +136,7 @@ div p {
   justify-content: center;
 }
 
-.About-box {
+.about-box {
   background:linear-gradient(0deg, rgba(241, 241, 241, 1), rgba(241, 241, 241, 0.47)), url('/media/Banner.png');
   background-repeat: no-repeat;
   background-position: center;

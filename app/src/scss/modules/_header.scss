@@ -1,15 +1,15 @@
 /* Style the header */
-.Header {
+.header {
     margin: 10px;
     height: 65px;
 }
 
-.img-bax-baner {
+.img__block__baner {
     text-align: center;
     padding-top: 6px;
 }
 
-.img-bax-baner-jackets {
+.img__block__baner__jackets {
     text-align: center;
     padding-top: 25px;
     padding-left: 15px;
@@ -20,7 +20,7 @@
     }
 }
 
-.img-baner {
+.img__baner {
     width: 150px;
     height: 80px;
 }
@@ -41,7 +41,7 @@
     padding: 15px;
 }
   
-a.bannerLinkBox{
+a.bannerLinkBlock{
     color: #000;
     font-weight: bolder;
     font-size: 15px;
@@ -52,7 +52,7 @@ a.bannerLinkBox{
 }
   
 
-.search-icon {
+.search__icon {
     display: flex;
     justify-content: flex-end;
     border: solid #f1f1f1;
@@ -73,7 +73,7 @@ a.bannerLinkBox{
     box-shadow: 0px 10px 13px -7px #000000, -20px 34px 18px 1px rgba(0,0,0,0);
 }
 
-.shopping_cart {
+.shopping__cart {
     color: #fff;
     background-color: #025951;
     padding: 6px;
@@ -82,7 +82,7 @@ a.bannerLinkBox{
 }
 
 
-.Box-baner {
+.block__baner {
     width: 100%;
     height: 85px;
     @media #{$screen__l} {
