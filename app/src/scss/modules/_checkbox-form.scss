@@ -1,140 +1,135 @@
+.form,
+.checkbox-container,
+.form-box-1,
+.form-box-2,
+.form-button {
+  display: flex;
+}
 
 .form {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: $padding--l;
-    &--left {
-      padding: $padding--s;
-      flex-direction: column;
-    }
-    &--right {  
-      padding: $padding--s;
-      flex-direction: column;
-    }
-    
+  flex-wrap: wrap;
+  justify-content: center;
+  //padding: $padding--l;
+  &--left {
+    padding: $padding--s;
+    flex-direction: column;
+  }
+  &--right {
+    padding: $padding--s;
+    flex-direction: column;
+  }
 }
 
 .checkbox-container {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    margin-top: 25px;
+  width: 100%;
+  justify-content: center;
+  margin-top: 25px;
 }
 
 .form-box-1 {
-    color: #fff;
-    background-color: #000;
-    display: flex;
-    flex-direction: column;
+  color: #fff;
+  background-color: #000;
+  flex-direction: column;
 }
 
 .form-box-2 {
-    background-color: #fff;
-    color: #000;
-    display: flex;
-    flex-direction: column;
+  background-color: #fff;
+  color: #000;
+  flex-direction: column;
 }
 
 .form-button {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    padding: $padding--l;
-    margin-top: 25px;
+  justify-content: center;
+  width: 100%;
+  padding: $padding--l;
+  margin-top: 25px;
 }
-  
 
 .email-input {
-    margin: 5px;
-    width: 55%;
-    text-align: start;
-    border: solid 1px #000;
-    border-radius: 5px;
-    padding: $padding--xs;
+  margin: 5px;
+  width: 55%;
+  text-align: start;
+  border: solid 1px #000;
+  border-radius: 5px;
+  padding: $padding--xs;
 }
 
 .form-name {
-    margin: 5px;
-    width: 55%;
-    text-align: start;
-    border: solid 1px #000;
-    border-radius: 5px;
-    padding: $padding--xs;
-    margin-top: 25px;
+  margin: 5px;
+  width: 55%;
+  text-align: start;
+  border: solid 1px #000;
+  border-radius: 5px;
+  padding: $padding--xs;
+  margin-top: 25px;
 }
-  
 
-.form p  {
-    font-size: $font--lx;
-    font:bold;
+.form p {
+  font-size: $font--lx;
+  font: bold;
 }
 
 .form-button button {
-    color: #fff;
-    background-color: #025951;
-    border: solid 1px #707070;
-    border-radius: 50px;
-    height: 50px;
-    width: 300px;
-    font-size: $font--l;
-    cursor: pointer;
+  color: #fff;
+  background-color: #025951;
+  border: solid 1px #707070;
+  border-radius: 50px;
+  height: 50px;
+  width: 300px;
+  font-size: $font--l;
+  cursor: pointer;
 }
-
-
 
 .box-container {
-    display: block;
-    position: relative;
-    padding-left: 35px;
-    margin-bottom: 12px;
-    cursor: pointer;
-    user-select: none;
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  user-select: none;
 }
 .box-container input {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-    height: 0;
-    width: 0;
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
 }
 
 .box-container:hover input ~ .checkmark {
-    background-color: #fff;
+  background-color: #fff;
 }
 
 .box-container input:checked ~ .checkmark {
-    background-color: #025951;
+  background-color: #025951;
 }
 
 .checkmark {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 25px;
-    width: 25px;
-    border: solid 1px #000;
-    border-radius: 25px;
-    background-color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  border: solid 1px #000;
+  border-radius: 25px;
+  background-color: #fff;
 }
 .checkmark:after {
-    content: "";
-    position: absolute;
-    display: none;
+  content: "";
+  position: absolute;
+  display: none;
 }
 .box-container input:checked ~ .checkmark:after {
-    display: block;
-  }
-.box-container .checkmark:after {
-    left: 9px;
-    top: 5px;
-    width: 5px;
-    height: 10px;
-    border: solid white;
-    border-width: 0 3px 3px 0;
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
+  display: block;
 }
-
-  
+.box-container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}

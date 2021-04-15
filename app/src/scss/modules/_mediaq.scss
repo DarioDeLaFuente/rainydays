@@ -7,12 +7,10 @@
  *
 */
 
-$screen__nbxs : "only screen and (max-height: 450px)";
+//$screen__nbxs : "only screen and (max-height: 450px)";
+//$screen__xs : "only screen and (max-width: 320px)";
 
-$screen__xs : "only screen and (max-width: 320px)";
-$screen__s : "only screen and (min-width: 460px)";
-
-$screen__m : "only screen and (min-width: 768px)";
-
-$screen__l : "only screen and (min-width: 1024px)";
-$screen__xl : "only screen and (min-width: 1200px)";
+$screen__s: "only screen and (min-width: 640px)";
+$screen__m: "only screen and (min-width: 768px)";
+$screen__l: "only screen and (min-width: 1024px)";
+$screen__xl: "only screen and (min-width: 1200px)";

@@ -1,0 +1,137 @@
+.product__block__info {
+    border: solid 0.5px #000;
+    opacity: 0.9;
+    z-index: 666;
+    display: flex;
+    background-color: #fff;
+    right: 134px;
+    top: 143px;
+    margin: 5px;
+    @media #{$screen__m} {} 
+    @media #{$screen__l} {
+      position: absolute;
+      width: 500px;} 
+    @media #{$screen__xl} {
+      width: 500px;
+      position: absolute;
+    } 
+}
+
+
+.product__info__grid__container {
+    display: grid;
+    padding-left: 25px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr; 
+    gap: 15px;
+    grid-template-areas:
+      "product_info"
+      "product_price"
+      "product_img"
+      "product_size_selector"
+      "product_delivery_selector";
+  }
+  
+  .product_info { 
+      grid-area: product_info;
+      padding-top: 15px;
+      h3 {
+        font-size: 25px;
+        font-weight: bolder;
+      }
+      h4 {
+        font-size: 15px;
+      }
+    }
+  
+  .product_price { 
+      grid-area: product_price;
+      display: flex;
+      p {
+        font-size: 25px;
+        font-weight: bolder;
+      }
+    }
+  
+  .product_img { 
+      grid-area: product_img;
+      display: flex;
+      img {
+        border: solid 0.5px #000;
+        width: 100px;
+        height: 100px;
+        margin: 5px;
+      }
+    }
+  
+  .product_size_selector { 
+      grid-area: product_size_selector;
+      padding-bottom: 30px;
+      select {
+        display: block;
+        background-color: transparent;
+        border: solid 0.5px #000;
+        padding: 0 3px 0 15px;
+        margin: 0;
+        width: 100%;
+        font-family: inherit;
+        font-size: inherit;
+        cursor: pointer;
+        line-height: inherit;
+      }
+    }
+    .product_button_selector {
+        padding-top: 25px;
+    }
+    .cart__button {
+        background-color:#025951;
+        color: #fff;
+        opacity: 1;
+        padding: 5px 15px 5px 15px;
+        border-radius: 15px;
+        font-size: 15px;
+        cursor: pointer;
+    }
+    .express__button {
+        background-color:#000;
+        color: #fff;
+        padding: 5px;
+        font-size: 15px;
+        cursor: pointer;
+    }
+  
+  .product_delivery_selector { 
+      grid-area: product_delivery_selector;
+      display: flex;
+      input {
+          border: solid 1px #000;
+      }
+    }
+    .shipping__options__grid-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        gap: 0px 0px;
+        grid-template-areas:
+          "shipping__options_1 shipping__options_1"
+          "shipping__options_2 shipping__options_2";
+      }
+      
+      .shipping__options_1 { grid-area: shipping__options_1; }
+      
+      .shipping__options_2 { 
+        grid-area: shipping__options_2;
+        input {
+            border: solid 1px #000;
+            height: 30px;
+        }
+
+        .shipping__search__button {
+            padding: 5px;
+            background-color:#BAC5CF;
+            color: #fff;
+            cursor: pointer;
+        } 
+    }
+      
+      

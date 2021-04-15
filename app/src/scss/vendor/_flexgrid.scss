@@ -1,126 +1,35 @@
-$flexgrid-breakpoints: (
-  xs: 320px,
-  sm: 480px,
-  md: 640px,
-  lg: 760px,
-  xl: 1020px,
-  xx: 1200px
-);
+/**
+ * Flexbox
+ *
+ * This is the root elements 4 flexbox object. 
+ * NB! Mobile first 
+ *
+ *
+*/
 
-$flexgrid-columns: 12;
-
-$flexgrid-gutters: (
-  xs: 0.2rem,
-  sm: 0.32rem,
-  md: 0.52rem,
-  lg: 0.84rem,
-  xl: 1.36rem,
-  xx: 2.2rem
-);
-
-@mixin flexgrid-break($size) {
-  @media (min-width: map-get($flexgrid-breakpoints, $size)) {
-    @content;
-  }
-}
+$screen__s: "only screen and (min-width: 640px)";
+$screen__m: "only screen and (min-width: 768px)";
 
 .grid {
-  box-sizing: border-box; /* 0 */
-  display: flex; /* 1 */
-  flex-flow: row wrap; /* 2 */
-  list-style: none; /* 3 */
-  margin: 0; /* 3 */
-  padding: 0; /* 3 */
+  display: flex;
+  flex-flow: row wrap;
 }
 
-.grid--column {
-  flex-direction: column; /* 4 */
+.grid-cell--xs-4 {
+  flex: 0 0 33.33333%;
+  max-width: 33.33333%;
 }
 
-.grid--alignStart {
-  align-items: flex-start; /* 5 */
-}
-
-.grid--alignEnd {
-  align-items: flex-end; /*  6 */
-}
-
-.grid--alignCenter {
-  align-items: center; /* 7 */
-}
-
-.grid--justifyCenter {
-  justify-content: center; /* 8 */
-}
-
-.grid--justifyEnd {
-  justify-content: flex-end; /* 9 */
-}
-
-.grid--spaceBetween {
-  justify-content: space-between; /* 10 */
-}
-
-.grid--spaceAround {
-  justify-content: space-around; /* 11 */
-}
-
-.grid-cell {
-  flex: 1;
-}
-
-.grid-cell--auto {
-  flex: 0 1 auto;
-}
-
-$flexgrid-cell-counter: 1;
-@each $key, $val in $flexgrid-breakpoints {
-  .grid-cell--#{$key} {
-    flex: 0 0 100%;
-    max-width: 100%;
-
-    @include flexgrid-break($key) {
-      flex: 1;
-    }
+@media #{$screen__s} {
+  .grid-cell--md-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
   }
-
-  @for $i from 1 through $flexgrid-columns {
-    @if ($flexgrid-cell-counter == 1) {
-      .grid-cell--#{$key}-#{$i} {
-        flex: 0 0 ($i/$flexgrid-columns)*100%;
-        max-width: ($i/$flexgrid-columns)*100%;
-      }
-    }
-  }
-
-  @include flexgrid-break($key) {
-    @for $i from 1 through $flexgrid-columns {
-      .grid-cell--#{$key}-#{$i} {
-        flex: 0 0 ($i/$flexgrid-columns)*100%;
-        max-width: ($i/$flexgrid-columns)*100%;
-      }
-    }
-  }
-
-  @include flexgrid-break($key) {
-    @for $i from 0 through $flexgrid-columns {
-      .grid-cell--#{$key}-offset-#{$i} {
-        margin-left: ($i/$flexgrid-columns)*100%;
-      }
-    }
-  }
-
-  $flexgrid-cell-counter: $flexgrid-cell-counter + 1;
 }
 
-@each $key, $val in $flexgrid-gutters {
-  .grid--gutter-#{$key} {
-    margin-top: -$val;
-    margin-left: -$val;
-
-    > [class^="Grid-cell"] {
-      padding-top: $val;
-      padding-left: $val;
-    }
+@media #{$screen__m } {
+  .grid-cell--lg-4 {
+    flex: 0 0 33.33333%;
+    max-width: 33.33333%;
   }
 }

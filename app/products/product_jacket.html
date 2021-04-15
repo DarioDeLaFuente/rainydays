@@ -20,57 +20,95 @@
     <div class="container">
       <div class="grid">
         <div class="block__product__container">
-            <div>
-                <ul>
-                <li><a href="#">/</a></li>
-                <li><a href="#">/</a></li>
-                <li><a href="#">/</a></li>
-                </ul>
-            </div>
+          <div class="scope">
+            <!--<tables>
+              <tr>
+              <th scope="col">| Product</th>
+              </tr>
+          </tables>-->
+          </div>
         <div class="block__product__horizontal__scroll">
             <img src="../media/Jacket_back.png" alt="#" class="#">
             <img src="../media/Jacket_1.png" alt="#" class="#">
             <img src="../media/Jacket_back.png" alt="#" class="#">
             <img src="../media/Jacket_1.png" alt="#" class="#">
             <img src="../media/Jacket_back.png" alt="#" class="#">
-          <div class="product__block__info">
-            <div class="#">
-              <img src="#" alt="#" class="#">
+            <img src="../media/Jacket_1.png" alt="#" class="#">
+            <img src="../media/Jacket_back.png" alt="#" class="#">
+        </div>
+        <div class="product__block__info">
+          <div class="product__info__grid__container">
+            <div class="block__product_2">
+              <a class="product__label_2" href="#">
+                <p>Only on online</p>
+              </a>
             </div>
-            <div class="#">
-              <div class="#">
-                <h2>This is an example of a header</h2>
-                <p>
-                Nequi omnit quasit eost aut fugit ut estium susam fuga.
-                Nequi omnit quasit eost aut fugit ut estium susam fuga.
-                Nequi omnit quasit eost aut fugit ut estium susam fuga.
-                Nequi omnit quasit eost aut fugit ut estium susam fuga.
-                Nequi omnit quasit eost aut fugit ut estium susam fuga.
-                Nequi omnit quasit eost aut fugit ut estium susam fuga.
-                Nequi omnit quasit eost aut fugit ut estium susam fuga.
-                Nequi omnit quasit eost aut fugit ut estium susam fuga.
-                Nequi omnit quasit eost aut fugit ut estium susam fuga.
-                Nequi omnit quasit eost aut fugit ut estium susam fuga.
-                Nequi omnit quasit eost aut fugit ut estium susam fuga.
-                Nequi omnit quasit eost aut fugit ut estium susam fuga.
-                </p>
+            <i class="i_2"></i>
+            <div class="product_info">
+              <h3>Pushing TM </h3>
+                <h4> Men’s rain jacket </h4>
+            </div>
+            <div class="product_price">
+              <p>1099,-</p>
+            </div>
+            <div class="product_img">
+              <img src="../media/Jacket_1.png" alt="#" class="#">
+              <img src="../media/Jacket_black_2.png" alt="" class="#">
+            </div>
+            <div class="product_size_selector">
+              <select>
+                <option value="#" disabled selected>Choose size</option>
+                <option>S</option>
+                <option>M</option>
+                <option>L</option>
+                <option>XL</option>
+              </select>
+              <div class="product_button_selector">
+                <span class="cart__button">Add to cart</span>
+                <span class="express__button" onclick="checkoutPage()">Express Checkout</span> 
+              </div>
+            </div>
+            <div class="product_delivery_selector">
+              <div class=" shipping__options__grid-container">
+                <div class="shipping__options_1">
+                  <span class="material-icons">local_shipping</span>
+                  <label for="shipping__options">Shipping options</label>
+                </div>
+                <div class="shipping__options_2">
+                  <form class="shipping__options">
+                    <input type="text" id="shipping__options" name="shipping__options" placeholder=" Zip code">
+                    <span class="shipping__search__button">Search</span>
+                  </form>
+                </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="product__grid__container">
-            <div class="block_1">
-                <a href="#">Product description</a>
+      </div>
+      <div class="product__grid__container">
+        <div class="block_1">
+            <div class="alert_block" id="alert_block_popup-1">
+            <div class="alert_block_overlay"></div>
+            <div class="alert_block_content">
+                <div class="alert_block_close_btn" onclick="toggleAlertBlock()" onkeyup="toggleAlertBlock()" >&times;</div>
+                <h1>title</h1>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo, ipsum praesentium. Possimus animi ab deserunt iure debitis, sed molestiae sapiente labore saepe placeat expedita id adipisci itaque, repudiandae porro quos eligendi in eaque corporis aliquid esse laborum qui tempora totam. Veritatis sunt hic autem, harum odit aliquam error unde veniam nostrum quo distinctio. Quaerat, enim deserunt. A cupiditate dolorum consequuntur maiores consequatur nulla, ullam animi illo libero sit, voluptates earum nemo, tempora optio necessitatibus amet hic? Quibusdam, eius dolores. Aperiam.
+                </p>
             </div>
-            <div class="block_2">
-                <a href="#">Specifictions</a>
             </div>
-            <div class="block_3">
-                <a href="#">Product review</a>
-            </div>
+            <button class="alert" onclick="toggleAlertBlock()" onkeyup="toggleAlertBlock()">Product description</button> 
+        </div>
+        <div class="block_2">
+            <button class="alert">Specifictions</button> 
+        </div>
+        <div class="block_3">
+            <button class="alert">Product review</button>
         </div>
       </div>
     </div>
+    <!-- checkoutpage  -->
+    <div id="checkoutPage"></div> 
+    <!-- /checkout page  -->
   </main>
   <!-- /Footer -->
   <footer class="footer"></footer>
