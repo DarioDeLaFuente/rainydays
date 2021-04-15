@@ -17,7 +17,6 @@
 }
 
 .sidenav {
-  display: flex;
   justify-content: inherit;
   height: 100%;
   width: 0;
@@ -56,24 +55,27 @@
   color: #000000;
   background-color: #ffffff;
 }
-
-.topnav {
+.topnav,
+.sidenav {
   display: flex;
+}
+.topnav {
   justify-content: flex-end;
   margin: 10px;
 }
 
 @media #{$screen__l} {
   /* Style the Navbar 4 desktop*/
+  .topnav,
+  .topnav ul,
+  .topnav li {
+    display: flex;
+  }
+
   .topnav {
     background-color: #025951;
-    display: flex;
     justify-content: center;
     margin: 0;
-    ul,
-    li {
-      display: flex;
-    }
     a {
       color: #fff;
       padding: 5px;

@@ -12,12 +12,6 @@
     margin-left: 100px;
     grid-template-areas: "block_1 block_2 block_3";
   }
-  @media #{$screen__l} {
-    grid-template-areas: "block_1 block_2 block_3";
-  }
-  @media #{$screen__xl} {
-    grid-template-areas: "block_1 block_2 block_3";
-  }
 }
 
 .alert_block .alert_block_overlay {

@@ -76,18 +76,25 @@ a.bannerLinkBlock {
   border-radius: 12px;
   width: 31px;
 }
+.block__baner,
+.logoBaner,
+.logoBanerProducts {
+  width: 100%;
+}
 
 .block__baner {
-  width: 100%;
   height: 85px;
   @media #{$screen__l} {
     height: 200px;
   }
 }
 
-.logoBaner {
-  width: 100%;
+.logoBaner,
+.logoBanerProducts {
   height: 200px;
+}
+
+.logoBaner {
   @media #{$screen__l} {
     background-image: url("/media/Banner.png");
     background-repeat: no-repeat;
@@ -98,8 +105,6 @@ a.bannerLinkBlock {
 
 .logoBanerProducts {
   background-image: url("/../media/Jackets_baner.png");
-  width: 100%;
-  height: 200px;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;

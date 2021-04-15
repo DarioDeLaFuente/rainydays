@@ -1,16 +1,6 @@
 .block__product__container {
-  @media #{$screen__m} {
-    align-items: center;
-    width: 100%;
-  }
-  @media #{$screen__l} {
-    align-items: center;
-    width: 100%;
-  }
-  @media #{$screen__xl} {
-    align-items: center;
-    width: 100%;
-  }
+  align-items: center;
+  width: 100%;
 }
 
 .block__product__horizontal__scroll {
