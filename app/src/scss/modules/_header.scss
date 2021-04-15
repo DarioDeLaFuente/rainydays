@@ -1,118 +1,119 @@
+.search__icon,
+.searchBar {
+  display: flex;
+  border: solid #f1f1f1;
+  -webkit-box-shadow: 0px 10px 13px -7px #000000,
+    -20px 34px 18px 1px rgba(0, 0, 0, 0);
+  box-shadow: 0px 10px 13px -7px #000000, -20px 34px 18px 1px rgba(0, 0, 0, 0);
+}
+
 /* Style the header */
-.Header {
-    margin: 10px;
-    height: 65px;
+.header {
+  margin: 10px;
+  height: 65px;
 }
 
-.img-bax-baner {
-    text-align: center;
-    padding-top: 6px;
+.img__block__baner {
+  text-align: center;
+  padding-top: 6px;
 }
 
-.img-bax-baner-jackets {
+.img__block__baner__jackets {
+  text-align: center;
+  padding-top: 25px;
+  padding-left: 15px;
+  @media #{$screen__l} {
+    padding-left: 670px;
+    padding-top: 50px;
+  }
+}
+
+.img__baner {
+  width: 150px;
+  height: 80px;
+}
+
+.bannerLink {
+  display: none;
+  @media #{$screen__l} {
     text-align: center;
     padding-top: 25px;
-    padding-left: 15px;
-    @media #{$screen__l} 
-    {
-        padding-left: 670px;
-        padding-top: 50px;
-    }
+    display: block;
+  }
 }
 
-.img-baner {
-    width: 150px;
-    height: 80px;
-}
-  
-.bannerLink {
-    display: none;
-    @media #{$screen__l} 
-    {
-        text-align: center;
-        padding-top: 25px;
-        display: block;
-    }
-}
-
-  
 .bannerLink a {
-    background-color: #fff;
-    padding: 15px;
+  background-color: #fff;
+  padding: 15px;
 }
-  
-a.bannerLinkBox{
-    color: #000;
-    font-weight: bolder;
-    font-size: 15px;
-    @media #{$screen__xs} 
-            {font-size: 14px}
-    @media #{$screen__l} 
-        {font-size: 15px;}
-}
-  
 
-.search-icon {
-    display: flex;
-    justify-content: flex-end;
-    border: solid #f1f1f1;
-    border-radius: 10px 0px 0px 10px;
-    width: 30px;
-    padding: 1px;
-    -webkit-box-shadow: 0px 10px 13px -7px #000000, -20px 34px 18px 1px rgba(0,0,0,0); 
-    box-shadow: 0px 10px 13px -7px #000000, -20px 34px 18px 1px rgba(0,0,0,0);
+a.bannerLinkBlock {
+  color: #000;
+  font-weight: bolder;
+  font-size: 15px;
+  @media #{$screen__l} {
+    font-size: 15px;
+  }
+}
+
+.search__icon {
+  justify-content: flex-end;
+  border-radius: 10px 0px 0px 10px;
+  width: 30px;
+  padding: 1px;
 }
 
 .searchBar {
-    border: solid #f1f1f1;
-    border-radius: 0px 10px 10px 0px;
-    text-align: center;
-    display: flex;
-    width: 200px;
-    -webkit-box-shadow: 0px 10px 13px -7px #000000, -20px 34px 18px 1px rgba(0,0,0,0); 
-    box-shadow: 0px 10px 13px -7px #000000, -20px 34px 18px 1px rgba(0,0,0,0);
+  border-radius: 0px 10px 10px 0px;
+  text-align: center;
+  width: 200px;
 }
 
-.shopping_cart {
-    color: #fff;
-    background-color: #025951;
-    padding: 6px;
-    border-radius: 12px;
-    width: 31px;
+.shopping__cart {
+  color: #fff;
+  background-color: #025951;
+  padding: 6px;
+  border-radius: 12px;
+  width: 31px;
+}
+.block__baner,
+.logoBaner,
+.logoBanerProducts {
+  width: 100%;
 }
 
+.block__baner {
+  height: 85px;
+  @media #{$screen__l} {
+    height: 200px;
+  }
+}
 
-.Box-baner {
-    width: 100%;
-    height: 85px;
-    @media #{$screen__l} {
-        height: 200px;
-    }
+.logoBaner,
+.logoBanerProducts {
+  height: 200px;
 }
 
 .logoBaner {
-    width: 100%;
-    height: 200px;
-    @media #{$screen__l} 
-    {
-        background-image: url('/media/Banner.png');
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-    }
-}
-
-.logoBanerProducts {
-    background-image: url('/../media/Jackets_baner.png');
-    width: 100%;
-    height: 200px;
+  @media #{$screen__l} {
+    background-image: url("/media/Banner.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+  }
+}
+
+.logoBanerProducts {
+  background-image: url("/../media/Jackets_baner.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .logo {
-    max-width: 70%;
-        @media #{$screen__l} 
-            {max-width: 40%;}
+  width: 280px;
+  @media #{$screen__l} {
+    width: 125px;
+    padding: 10px;
+  }
 }

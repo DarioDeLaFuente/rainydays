@@ -10,7 +10,7 @@
 > `docker-compose stop`
 
 
-## RUN SASS
+## RUN SCSS
 
 `npm run bulid`
 
@@ -18,4 +18,4 @@
 
 
 > ## Rebuild
->`npm rebuild node-sass`
+>`npm rebuild node-scss`
