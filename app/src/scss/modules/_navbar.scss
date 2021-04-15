@@ -1,36 +1,33 @@
 /* Style the Navbar 4 Mobail*/
-.Header {
+.header {
   display: none;
 }
 
-.sidenav.openSidenav{
+.sidenav.openSidenav {
   width: 100%;
 }
 
-.sidenav.closeSidenav{
+.sidenav.closeSidenav {
   width: 0;
 }
 
 .openNav {
-  font-size:30px;
-  cursor:pointer;
+  font-size: 30px;
+  cursor: pointer;
 }
 
 .sidenav {
-  display: flex;
   justify-content: inherit;
   height: 100%;
   width: 0;
   position: fixed;
-  z-index: 8;
+  z-index: 999999999;
   top: 0;
   left: 0;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   overflow-x: hidden;
   transition: width 0.5s;
   padding-top: 250px;
-  @media #{$screen__nbxs }
-  {padding-top: 100px;} 
 }
 
 .sidenav a {
@@ -39,12 +36,10 @@
   padding: 8px 8px 8px 32px;
   text-decoration: none;
   font-size: 25px;
-  color: #FFFFFF;
+  color: #ffffff;
   background-color: #025951;
   transition: width 0.3s;
   margin: 10px;
-  @media #{$screen__nbxs }
-  {font-size: 18px;} 
 }
 
 .sidenav a:hover {
@@ -58,30 +53,29 @@
   font-size: 36px;
   margin-left: 50px;
   color: #000000;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }
-
-.topnav {
+.topnav,
+.sidenav {
   display: flex;
+}
+.topnav {
   justify-content: flex-end;
   margin: 10px;
 }
 
-
-
 @media #{$screen__l} {
   /* Style the Navbar 4 desktop*/
+  .topnav,
+  .topnav ul,
+  .topnav li {
+    display: flex;
+  }
+
   .topnav {
     background-color: #025951;
-    display: flex;
     justify-content: center;
     margin: 0;
-    ul {
-      display: flex;
-    }
-    li {
-      display: flex;
-    }
     a {
       color: #fff;
       padding: 5px;
@@ -97,25 +91,19 @@
     }
   }
 
-  .Header {
+  .header {
     display: block;
   }
-  
+
   .sidenav {
     background-color: transparent;
     position: relative;
     width: auto;
     padding-top: 0;
   }
-  .sidenav .closebtn {
+  .sidenav .closebtn,
+  span.openNav,
+  .closeSidenav {
     display: none;
   }
-  
-  span.openNav{
-    display: none;
-  }
-  .closeSidenav{
-    display: none;
-  }
-  
 }

@@ -1,140 +1,136 @@
+.form,
+.checkbox-container,
+.form-box-1,
+.form-box-2,
+.form-button {
+  display: flex;
+}
+
+.form-box-2,
+.box-container:hover input ~ .checkmark,
+.checkmark {
+  background-color: #fff;
+}
+
+.form-button button,
+.box-container,
+.box-container input {
+  cursor: pointer;
+}
+
+.checkmark,
+.box-container input,
+.checkmark:after {
+  position: absolute;
+}
+
+.form,
+.checkbox-container,
+.form-button {
+  justify-content: center;
+}
+.form--column,
+.form-box-1,
+.form-box-2 {
+  flex-direction: column;
+}
 
 .form {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: $padding--l;
-    &--left {
-      padding: $padding--s;
-      flex-direction: column;
-    }
-    &--right {  
-      padding: $padding--s;
-      flex-direction: column;
-    }
-    
+  flex-wrap: wrap;
+  &--column {
+    padding: $padding--s;
+  }
 }
 
 .checkbox-container {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    margin-top: 25px;
+  width: 100%;
+  margin-top: 25px;
 }
 
 .form-box-1 {
-    color: #fff;
-    background-color: #000;
-    display: flex;
-    flex-direction: column;
+  color: #fff;
+  background-color: #000;
 }
 
 .form-box-2 {
-    background-color: #fff;
-    color: #000;
-    display: flex;
-    flex-direction: column;
+  color: #000;
 }
 
 .form-button {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    padding: $padding--l;
-    margin-top: 25px;
+  width: 100%;
+  padding: $padding--l;
+  margin-top: 25px;
 }
-  
 
-.email-input {
-    margin: 5px;
-    width: 55%;
-    text-align: start;
-    border: solid 1px #000;
-    border-radius: 5px;
-    padding: $padding--xs;
+.email-input,
+.form-name {
+  margin: 5px;
+  width: 55%;
+  text-align: start;
+  border: solid 1px #000;
+  border-radius: 5px;
+  padding: $padding--xs;
 }
 
 .form-name {
-    margin: 5px;
-    width: 55%;
-    text-align: start;
-    border: solid 1px #000;
-    border-radius: 5px;
-    padding: $padding--xs;
-    margin-top: 25px;
+  margin-top: 25px;
 }
-  
 
-.form p  {
-    font-size: $font--lx;
-    font:bold;
+.form p {
+  font-size: $font--lx;
+  font: bold;
 }
 
 .form-button button {
-    color: #fff;
-    background-color: #025951;
-    border: solid 1px #707070;
-    border-radius: 50px;
-    height: 50px;
-    width: 300px;
-    font-size: $font--l;
-    cursor: pointer;
+  color: #fff;
+  background-color: #025951;
+  border: solid 1px #707070;
+  border-radius: 50px;
+  height: 50px;
+  width: 300px;
+  font-size: $font--l;
 }
-
-
 
 .box-container {
-    display: block;
-    position: relative;
-    padding-left: 35px;
-    margin-bottom: 12px;
-    cursor: pointer;
-    user-select: none;
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  user-select: none;
 }
 .box-container input {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-    height: 0;
-    width: 0;
-}
-
-.box-container:hover input ~ .checkmark {
-    background-color: #fff;
+  opacity: 0;
+  height: 0;
+  width: 0;
 }
 
 .box-container input:checked ~ .checkmark {
-    background-color: #025951;
+  background-color: #025951;
 }
 
 .checkmark {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 25px;
-    width: 25px;
-    border: solid 1px #000;
-    border-radius: 25px;
-    background-color: #fff;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  border: solid 1px #000;
+  border-radius: 25px;
 }
 .checkmark:after {
-    content: "";
-    position: absolute;
-    display: none;
+  content: "";
+  display: none;
 }
 .box-container input:checked ~ .checkmark:after {
-    display: block;
-  }
-.box-container .checkmark:after {
-    left: 9px;
-    top: 5px;
-    width: 5px;
-    height: 10px;
-    border: solid white;
-    border-width: 0 3px 3px 0;
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
+  display: block;
 }
-
-  
+.box-container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}

@@ -1,13 +1,19 @@
-$Container: 1000px;
+$container: 1000px;
 $padding--l: 30px;
 $padding--s: 15px;
 $padding--xs: 5px;
 
-$font--s:15px;
-$font--m:23px;
-$font--l:25px;
-$font--lx:37px;
+$font--s: 15px;
+$font--m: 23px;
+$font--l: 25px;
+$font--lx: 37px;
 
+.box,
+.box-1,
+.box-2,
+.content-box {
+  display: flex;
+}
 
 /* Reset av broser adding */
 * {
@@ -15,20 +21,21 @@ $font--lx:37px;
   padding: 0;
   margin: 0;
 }
-  
+
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   margin: 0;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
 
-main{
+main {
   flex: 1;
 }
-  
-h1, h2 {
+
+h1,
+h2 {
   font-weight: 300;
   line-height: 1.2;
   margin: 10px 0;
@@ -50,7 +57,7 @@ img {
   width: 100%;
   height: auto;
 }
-
+// NOT
 div p {
   margin: 10px 5px;
 }
@@ -59,15 +66,14 @@ div p {
   font-size: 20px !important;
 }
 
-.Content {
-  max-width:$Container;
+.content {
+  max-width: $container;
   margin: auto;
   padding-top: 5px;
   overflow: hidden;
 }
 
-.Box {
-  display: flex;
+.box {
   padding: $padding--l;
   position: relative;
   &--center {
@@ -81,32 +87,28 @@ div p {
   }
 }
 
-
-.Box-1 {
+.box-1 {
   text-align: start;
-  display: flex;
 }
 
-.Box-2 {
-  display: flex;
+.box-2 {
   margin-top: 5px;
   justify-content: center;
   margin-left: 35px;
-  @media #{$screen__l} 
-    { margin-top: 20px;
-        margin-left: 0;
-    }
+  @media #{$screen__l} {
+    margin-top: 20px;
+    margin-left: 0;
   }
+}
 
-.Box-3 {
+.box-3 {
   text-align: end;
   margin-top: 20px;
 }
 
-.Box--banner--center {
+.box--banner--center {
   height: 250px;
 }
-  
 
 .prod-card {
   bottom: 30px;
@@ -126,18 +128,22 @@ div p {
   max-width: 100%;
   color: #000;
   text-align: center;
-  font-size:$font--m;
-    @media #{$screen__l} 
-      { max-width: 50%;}
+  @media #{$screen__l} {
+    max-width: 50%;
+  }
 }
 
 .content-box {
-  display: flex;
   justify-content: center;
 }
 
-.About-box {
-  background:linear-gradient(0deg, rgba(241, 241, 241, 1), rgba(241, 241, 241, 0.47)), url('/media/Banner.png');
+.about-box {
+  background: linear-gradient(
+      0deg,
+      rgba(241, 241, 241, 1),
+      rgba(241, 241, 241, 0.47)
+    ),
+    url("/media/Banner.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
