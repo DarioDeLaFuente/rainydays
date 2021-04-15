@@ -9,7 +9,6 @@
 .form {
   flex-wrap: wrap;
   justify-content: center;
-  //padding: $padding--l;
   &--left {
     padding: $padding--s;
     flex-direction: column;
@@ -26,7 +25,7 @@
   margin-top: 25px;
 }
 
-.form-box-1 {
+.form-box-1, .form-box-2 {
   color: #fff;
   background-color: #000;
   flex-direction: column;
@@ -35,7 +34,6 @@
 .form-box-2 {
   background-color: #fff;
   color: #000;
-  flex-direction: column;
 }
 
 .form-button {
@@ -45,7 +43,7 @@
   margin-top: 25px;
 }
 
-.email-input {
+.email-input, .form-name{
   margin: 5px;
   width: 55%;
   text-align: start;
@@ -55,12 +53,6 @@
 }
 
 .form-name {
-  margin: 5px;
-  width: 55%;
-  text-align: start;
-  border: solid 1px #000;
-  border-radius: 5px;
-  padding: $padding--xs;
   margin-top: 25px;
 }
 

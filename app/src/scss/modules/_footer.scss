@@ -14,7 +14,7 @@
     "footer__block-4 footer__block-4 footer__block-4 footer__block-4"
     "footer__block-5 footer__block-5-a footer__block-6 footer__block-6";
 }
-.footer__block-4 {
+.footer__block-4, .footer__block-5, .footer__block-5-a, .footer__block-6  {
   grid-area: footer__block-4;
   place-self: center;
   a {
@@ -28,37 +28,19 @@
 }
 .footer__block-5 {
   grid-area: footer__block-5;
-  place-self: center;
   padding-top: 25px;
-  a {
-    color: #fff;
-    border: solid 1px;
-    padding: 5px;
-  }
   @media #{$screen__l} {
     padding-top: 65px;
   }
 }
 .footer__block-5-a {
   grid-area: footer__block-5-a;
-  place-self: center;
-  padding-top: 25px;
-  a {
-    color: #fff;
-    border: solid 1px;
-    padding: 5px;
-  }
-  @media #{$screen__l} {
-    padding-top: 65px;
-  }
+  
 }
 .footer__block-6 {
   grid-area: footer__block-6;
-  place-self: center;
   padding-top: 30px;
-  a {
-    color: #fff;
-  }
+
   @media #{$screen__l} {
     padding-top: 39px;
   }
@@ -81,7 +63,7 @@
   }
 }
 
-.center__block-1 {
+.center__block-1, .center__block-2 {
   place-self: center;
   a {
     color: #fff;
@@ -89,13 +71,6 @@
   }
 }
 
-.center__block-2 {
-  place-self: center;
-  a {
-    color: #fff;
-    padding: 5px;
-  }
-}
 
 .sb-grid-container {
   display: grid;
@@ -122,7 +97,7 @@
   }
 }
 
-.footer__block-1 {
+.footer__block-1, .footer__block-2 {
   display: flex;
   margin: 10px;
   width: 50%;
@@ -131,17 +106,6 @@
   }
   a {
     margin: 10px;
-  }
-}
-.footer__block-2 {
-  display: flex;
-  margin: 10px;
-  width: 50%;
-  li {
-    margin: 20px;
-  }
-  a {
-    margin-top: 10px;
   }
 }
 

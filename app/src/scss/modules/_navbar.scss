@@ -29,8 +29,6 @@
   overflow-x: hidden;
   transition: width 0.5s;
   padding-top: 250px;
-  //@media #{$screen__nbxs }
-  //{padding-top: 100px;}
 }
 
 .sidenav a {
@@ -43,8 +41,6 @@
   background-color: #025951;
   transition: width 0.3s;
   margin: 10px;
-  //@media #{$screen__nbxs }
-  //{font-size: 18px;}
 }
 
 .sidenav a:hover {
@@ -74,9 +70,7 @@
     display: flex;
     justify-content: center;
     margin: 0;
-    ul {
-      display: flex;
-    }
+    ul,
     li {
       display: flex;
     }
@@ -105,13 +99,8 @@
     width: auto;
     padding-top: 0;
   }
-  .sidenav .closebtn {
-    display: none;
-  }
-
-  span.openNav {
-    display: none;
-  }
+  .sidenav .closebtn,
+  span.openNav,
   .closeSidenav {
     display: none;
   }
