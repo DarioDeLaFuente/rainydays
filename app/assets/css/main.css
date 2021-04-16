@@ -574,8 +574,8 @@ a.bannerLinkBox-4 {
 .product__card__label__block__link__3,
 .product__card__label__block__link__4,
 .product__card__label,
-.i,
-.i_2,
+.labelTale,
+.labelTale_2,
 .product__label,
 .product__label_2 {
   position: absolute; }
@@ -628,8 +628,8 @@ a.product__card__label__block__link__4 {
   background-color: #8c8303;
   text-transform: uppercase; }
 
-.i,
-.i_2 {
+.labelTale,
+.labelTale_2 {
   display: flex;
   filter: brightness(80%);
   top: 4.4rem;
@@ -640,8 +640,8 @@ a.product__card__label__block__link__4 {
   width: 30px;
   height: 30px; }
   @media only screen and (min-width: 768px) {
-    .i,
-    .i_2 {
+    .labelTale,
+    .labelTale_2 {
       top: 4rem; } }
 
 .product__label_2 {
@@ -652,10 +652,10 @@ a.product__card__label__block__link__4 {
       top: 3.1rem;
       right: -1.5rem; } }
 
-.i_2 {
+.labelTale_2 {
   display: none; }
   @media only screen and (min-width: 1024px) {
-    .i_2 {
+    .labelTale_2 {
       display: block;
       right: -41px;
       top: 4rem; } }

@@ -10,8 +10,8 @@
 .product__card__label__block__link__3,
 .product__card__label__block__link__4,
 .product__card__label,
-.i,
-.i_2,
+.labelTale,
+.labelTale_2,
 .product__label,
 .product__label_2 {
   position: absolute;
@@ -70,8 +70,8 @@ a.product__card__label__block__link__4 {
   text-transform: uppercase;
 }
 
-.i,
-.i_2 {
+.labelTale,
+.labelTale_2 {
   display: flex;
   filter: brightness(80%);
   top: 4.4rem;
@@ -95,7 +95,7 @@ a.product__card__label__block__link__4 {
   }
 }
 
-.i_2 {
+.labelTale_2 {
   display: none;
   @media #{$screen__l} {
     display: block;
