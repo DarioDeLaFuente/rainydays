@@ -1,0 +1,23 @@
+.error_grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "error_tittel error_tittel"
+    "error_info error_info";
+}
+.error_tittel,
+.error_info {
+  justify-content: center;
+  display: flex;
+  font-size: 2rem;
+  padding: 45px;
+}
+.error_tittel {
+  grid-area: error_tittel;
+}
+
+.error_info {
+  grid-area: error_info;
+}

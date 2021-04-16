@@ -8,7 +8,7 @@
   border: solid 0.5px #000;
   opacity: 0.9;
   z-index: 666;
-  
+
   background-color: #fff;
   right: 134px;
   top: 143px;
@@ -44,7 +44,9 @@
     font-size: 15px;
   }
 }
-.product_price,.product__block__info,.product_delivery_selector {
+.product_price,
+.product__block__info,
+.product_delivery_selector {
   display: flex;
 }
 
@@ -90,18 +92,16 @@
   padding: 5px 15px 5px 15px;
   border-radius: 15px;
   font-size: 15px;
-  
 }
 .express__button {
   background-color: #000;
   padding: 5px;
   font-size: 15px;
-  
 }
 
 .product_delivery_selector {
   grid-area: product_delivery_selector;
-  
+
   input {
     border: solid 1px #000;
   }
@@ -133,6 +133,10 @@
   }
 }
 
-.shipping__search__button,.product_size_selector, .express__button, .cart__button, .product_size_selector select {
+.shipping__search__button,
+.product_size_selector,
+.express__button,
+.cart__button,
+.product_size_selector select {
   cursor: pointer;
 }

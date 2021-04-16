@@ -46,12 +46,12 @@ function checkoutPageClose() {
 *It includes openNav
 */
  // Add a class to a DIV with javascript.
-function openNav() {
-    document.getElementById("mySidenav").classList.add("openSidenav");
+function openSideNav() {
+    document.getElementById("sideNav").classList.add("openSideNav");
 }
   
-function closeNav() {
-    document.getElementById("mySidenav").classList.remove("openSidenav");
+function closeSideNav() {
+    document.getElementById("sideNav").classList.remove("openSideNav");
 }
 
 
@@ -69,7 +69,7 @@ function toggleAlertBlock() {
  * Error
  */
 
- function checkoutErrorPage() {
-  $(".checkout_page").add("error_page.html");
-}
+ //function checkoutErrorPage() {
+ // $(".checkout_page").add("error_page.html");
+//}
 

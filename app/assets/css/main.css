@@ -148,17 +148,17 @@ div p {
 .header {
   display: none; }
 
-.sidenav.openSidenav {
+.mdSideNav.openSideNav {
   width: 100%; }
 
-.sidenav.closeSidenav {
+.mdSideNav.closeSideNav {
   width: 0; }
 
 .openNav {
   font-size: 30px;
   cursor: pointer; }
 
-.sidenav {
+.mdSideNav {
   justify-content: inherit;
   height: 100%;
   width: 0;
@@ -171,7 +171,7 @@ div p {
   transition: width 0.5s;
   padding-top: 250px; }
 
-.sidenav a {
+.mdSideNav a {
   display: grid;
   justify-items: end;
   padding: 8px 8px 8px 32px;
@@ -182,10 +182,10 @@ div p {
   transition: width 0.3s;
   margin: 10px; }
 
-.sidenav a:hover {
+.mdSideNav a:hover {
   color: #f1f1f1; }
 
-.sidenav .closebtn {
+.mdSideNav .sideNavCloseButton {
   position: absolute;
   top: 0;
   right: 25px;
@@ -195,7 +195,7 @@ div p {
   background-color: #ffffff; }
 
 .topnav,
-.sidenav {
+.mdSideNav {
   display: flex; }
 
 .topnav {
@@ -224,14 +224,14 @@ div p {
         color: white; }
   .header {
     display: block; }
-  .sidenav {
+  .mdSideNav {
     background-color: transparent;
     position: relative;
     width: auto;
     padding-top: 0; }
-  .sidenav .closebtn,
+  .mdSideNav .sideNavCloseButton,
   span.openNav,
-  .closeSidenav {
+  .closemdSideNav {
     display: none; } }
 
 .search__icon,
@@ -912,7 +912,9 @@ a.product__card__label {
   .product_info h4 {
     font-size: 15px; }
 
-.product_price, .product__block__info, .product_delivery_selector {
+.product_price,
+.product__block__info,
+.product_delivery_selector {
   display: flex; }
 
 .product_price {
@@ -982,8 +984,32 @@ a.product__card__label {
     padding: 5px;
     background-color: #bac5cf; }
 
-.shipping__search__button, .product_size_selector, .express__button, .cart__button, .product_size_selector select {
+.shipping__search__button,
+.product_size_selector,
+.express__button,
+.cart__button,
+.product_size_selector select {
   cursor: pointer; }
+
+.error_grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas: "error_tittel error_tittel" "error_info error_info"; }
+
+.error_tittel,
+.error_info {
+  justify-content: center;
+  display: flex;
+  font-size: 2rem;
+  padding: 45px; }
+
+.error_tittel {
+  grid-area: error_tittel; }
+
+.error_info {
+  grid-area: error_info; }
 
 .product__grid__container {
   width: 100%;
