@@ -55,6 +55,9 @@ body {
 main {
   flex: 1; }
 
+h1.hidden {
+  display: none; }
+
 h1,
 h2 {
   font-weight: 300;
