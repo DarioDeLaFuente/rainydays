@@ -8,8 +8,11 @@
 */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
 .grid {
-  display: flex;
-  flex-flow: row wrap; }
+  flex: 1; }
+  @media only screen and (min-width: 768px) {
+    .grid {
+      display: flex;
+      flex-flow: row wrap; } }
 
 .grid-cell--xs-4 {
   flex: 0 0 33.33333%;
@@ -84,14 +87,15 @@ div p {
 
 .content {
   max-width: 1000px;
-  margin: auto;
   padding-top: 5px;
   overflow: hidden; }
+  @media only screen and (min-width: 768px) {
+    .content {
+      margin: auto; } }
 
 .box {
   padding: 30px;
-  position: relative;
-  margin: 0.5rem; }
+  position: relative; }
   .box--center {
     justify-content: center; }
   .box--left {
