@@ -58,7 +58,8 @@ input {
 }
 
 img {
-  width: 100%;
+  //width: 100%;
+  //width: 100vh;
   height: auto;
 }
 // NOT
@@ -123,6 +124,7 @@ div p {
 }
 
 .prod-img {
+  width: 100%;
   box-shadow: 12px 13px 13px -10px #000, -20px 26px 4px 12px transparent;
 }
 

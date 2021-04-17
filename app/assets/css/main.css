@@ -74,7 +74,6 @@ input {
   border: none; }
 
 img {
-  width: 100%;
   height: auto; }
 
 div p {
@@ -126,6 +125,7 @@ div p {
   background-color: #fff; }
 
 .prod-img {
+  width: 100%;
   box-shadow: 12px 13px 13px -10px #000, -20px 26px 4px 12px transparent; }
 
 .about-content-box {
