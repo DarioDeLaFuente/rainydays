@@ -90,7 +90,8 @@ div p {
 
 .box {
   padding: 30px;
-  position: relative; }
+  position: relative;
+  margin: 0.5rem; }
   .box--center {
     justify-content: center; }
   .box--left {
