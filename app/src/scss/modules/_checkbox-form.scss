@@ -77,8 +77,11 @@
 }
 
 .form p {
-  font-size: $font--lx;
+  font-size: $font--l;
   font: bold;
+  @media #{$screen__m} {
+    font-size: $font--l;
+  }
 }
 
 .form-button button {

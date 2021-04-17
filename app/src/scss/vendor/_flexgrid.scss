@@ -11,13 +11,15 @@ $screen__s: "only screen and (min-width: 640px)";
 $screen__m: "only screen and (min-width: 768px)";
 
 
-.grid {
+.grid  {
   flex: 1;
-  @media #{$screen_s } {
-  display: flex;
-  flex-flow: row wrap;
+  //margin: 5px;
+  @media #{$screen__s } {
+    display: flex;
+    flex-flow: row wrap;
   }
 }
+
 
 .grid-cell--xs-4 {
   flex: 0 0 33.33333%;
