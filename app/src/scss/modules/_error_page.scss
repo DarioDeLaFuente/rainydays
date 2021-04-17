@@ -11,11 +11,14 @@
 .error_info {
   justify-content: center;
   display: flex;
-  font-size: 2rem;
   padding: 45px;
+  @media #{$screen__l} {
+    font-size: 2rem;
+  }
 }
 .error_tittel {
   grid-area: error_tittel;
+  border-top: solid 0.5px #000;
 }
 
 .error_info {
