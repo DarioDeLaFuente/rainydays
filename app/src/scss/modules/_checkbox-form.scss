@@ -79,7 +79,7 @@
 .form p {
   font-size: $font--l;
   font: bold;
-  @media #{$screen__m} {
+  @media #{$screen__l} {
     font-size: $font--lx;
   }
 }
