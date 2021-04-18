@@ -13,7 +13,6 @@ $screen__m: "only screen and (min-width: 768px)";
 
 .grid  {
   flex: 1;
-  //margin: 5px;
   @media #{$screen__s } {
     display: flex;
     flex-flow: row wrap;
