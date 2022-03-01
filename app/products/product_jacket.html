@@ -8,16 +8,24 @@
       content="Product Page | RainyDays Sport and Villmark is the Nordic region's largest sports chain. We offer a wide range of well-known brands online and in our many department stores. Welcome to a pleasant trade at RainyDays!"
     />
     <title>RainyDays | Product</title>
-    <link
-      href="../assets/css/main.min.css"
-      rel="stylesheet"
-      type="text/css"
-      media="all"
-    />
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
+    <link href="../assets/css/main.min.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <!-- Hotjar Tracking Code for https://sharp-fermi-318929.netlify.app -->
+    <script>
+      (function (h, o, t, j, a, r) {
+        h.hj =
+          h.hj ||
+          function () {
+            (h.hj.q = h.hj.q || []).push(arguments);
+          };
+        h._hjSettings = { hjid: 2853550, hjsv: 6 };
+        a = o.getElementsByTagName("head")[0];
+        r = o.createElement("script");
+        r.async = 1;
+        r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+        a.appendChild(r);
+      })(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv=");
+    </script>
   </head>
   <body>
     <h1 class="hidden">RainyDays</h1>
@@ -66,68 +74,7 @@
             alt="products img of the jackets backside, color: orange at the top and blue at the bottom."
           />
         </div>
-        <div class="product__block__info">
-          <div class="product__info__grid__container">
-            <div class="block__product_2">
-              <a class="product__label_2" href="#">
-                <p>Only on online</p>
-              </a>
-            </div>
-            <div class="labelTale_2"></div>
-            <div class="product_info">
-              <h3>Pushing TM</h3>
-              <h4>Men’s rain jacket</h4>
-            </div>
-            <div class="product_price">
-              <p>1099,-</p>
-            </div>
-            <div class="product_img">
-              <img
-                src="../media/Jacket_1.png"
-                alt="products img of a jacket, color: orange at the top and blue at the bottom. with a horizontal zipper in the middle"
-              />
-              <img
-                src="../media/Jacket_black_2.png"
-                alt="products img of a jacket, color: Black, with a horizontal zipper in the middle"
-              />
-            </div>
-            <div class="product_size_selector">
-              <label for="cart_options"></label>
-              <select id="cart_options">
-                <option disabled selected>Choose size</option>
-                <option>S</option>
-                <option>M</option>
-                <option>L</option>
-                <option>XL</option>
-              </select>
-              <div class="product_button_selector">
-                <span class="cart__button">Add to cart</span>
-                <span class="express__button" onclick="checkoutPage()"
-                  >Express Checkout</span
-                >
-              </div>
-            </div>
-            <div class="product_delivery_selector">
-              <div class="shipping__options__grid-container">
-                <div class="shipping__options_1">
-                  <span class="material-icons">local_shipping</span>
-                  <label for="shipping__options">Shipping options</label>
-                </div>
-                <div class="shipping__options_2">
-                  <form class="shipping__options">
-                    <input
-                      type="text"
-                      id="shipping__options"
-                      name="shipping__options"
-                      placeholder=" Zip code"
-                    />
-                    <span class="shipping__search__button">Search</span>
-                  </form>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <div class="product__block__info"></div>
       </div>
       <div class="product__grid__container">
         <div class="block_1">
@@ -143,24 +90,18 @@
               </div>
               <h1>title</h1>
               <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Explicabo, ipsum praesentium. Possimus animi ab deserunt iure
-                debitis, sed molestiae sapiente labore saepe placeat expedita id
-                adipisci itaque, repudiandae porro quos eligendi in eaque
-                corporis aliquid esse laborum qui tempora totam. Veritatis sunt
-                hic autem, harum odit aliquam error unde veniam nostrum quo
-                distinctio. Quaerat, enim deserunt. A cupiditate dolorum
-                consequuntur maiores consequatur nulla, ullam animi illo libero
-                sit, voluptates earum nemo, tempora optio necessitatibus amet
-                hic? Quibusdam, eius dolores. Aperiam.
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo, ipsum
+                praesentium. Possimus animi ab deserunt iure debitis, sed molestiae sapiente labore
+                saepe placeat expedita id adipisci itaque, repudiandae porro quos eligendi in eaque
+                corporis aliquid esse laborum qui tempora totam. Veritatis sunt hic autem, harum
+                odit aliquam error unde veniam nostrum quo distinctio. Quaerat, enim deserunt. A
+                cupiditate dolorum consequuntur maiores consequatur nulla, ullam animi illo libero
+                sit, voluptates earum nemo, tempora optio necessitatibus amet hic? Quibusdam, eius
+                dolores. Aperiam.
               </p>
             </div>
           </div>
-          <button
-            class="alert"
-            onclick="toggleAlertBlock()"
-            onkeyup="toggleAlertBlock()"
-          >
+          <button class="alert" onclick="toggleAlertBlock()" onkeyup="toggleAlertBlock()">
             Product description
           </button>
         </div>
@@ -184,5 +125,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="../scripts/functios.js"></script>
+    <script src="../scripts/products.js" type="module"></script>
   </body>
 </html>
