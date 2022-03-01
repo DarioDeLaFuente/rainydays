@@ -2,8 +2,7 @@
 .searchBar {
   display: flex;
   border: solid #f1f1f1;
-  -webkit-box-shadow: 0px 10px 13px -7px #000000,
-    -20px 34px 18px 1px rgba(0, 0, 0, 0);
+  -webkit-box-shadow: 0px 10px 13px -7px #000000, -20px 34px 18px 1px rgba(0, 0, 0, 0);
   box-shadow: 0px 10px 13px -7px #000000, -20px 34px 18px 1px rgba(0, 0, 0, 0);
 }
 
@@ -76,6 +75,20 @@ a.bannerLinkBlock {
   border-radius: 12px;
   width: 31px;
 }
+.cart {
+  border: 1px solid green;
+  background: #fff;
+  max-width: 600px;
+  min-width: 200px;
+  padding: 20px;
+  margin: auto;
+  position: fixed;
+  right: 50px;
+  top: 50px;
+  display: none;
+  z-index: 99999;
+}
+
 .block__baner,
 .logoBaner,
 .logoBanerProducts {
