@@ -309,6 +309,19 @@ a.bannerLinkBlock {
   border-radius: 12px;
   width: 31px; }
 
+.cart {
+  border: 1px solid green;
+  background: #fff;
+  max-width: 600px;
+  min-width: 200px;
+  padding: 20px;
+  margin: auto;
+  position: fixed;
+  right: 50px;
+  top: 50px;
+  display: none;
+  z-index: 99999; }
+
 .block__baner,
 .logoBaner,
 .logoBanerProducts {
@@ -977,6 +990,9 @@ a.product__card__label {
   padding: 5px 15px 5px 15px;
   border-radius: 15px;
   font-size: 15px; }
+
+.cart__button:hover {
+  background-color: #1b3a37; }
 
 .express__button {
   background-color: #000;
