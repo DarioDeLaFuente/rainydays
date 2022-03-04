@@ -536,6 +536,14 @@ a.bannerLinkBox-4 {
   justify-content: center;
   padding-bottom: 15px; }
 
+.total {
+  z-index: 99999999;
+  color: red; }
+
+.total-counter {
+  z-index: 99999999;
+  color: red; }
+
 .checkout_box_main_1,
 .checkout_box_main_purchase {
   grid-area: checkout_box_main_1;

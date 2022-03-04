@@ -1,27 +1,36 @@
 <div class="overlay_checkout_page">
   <div class="checkout_box_grid-container">
-    <div class="checkout_box_exit" onclick="checkoutPageClose()">&times;</div>
+    <div class="checkout_box_exit" onload="loadCart()" onclick="checkoutPageClose()">&times;</div>
     <div class="checkout_box_title">
       <h3>Rainy days AS</h3>
     </div>
     <div class="checkout_box_main_1">
       <div class="checkout_product">
-        <img src="../media/Jacket_1.png" alt="products img of a jacket, color: orange at the top and blue at the bottom. with a horizontal zipper in the middle" class="checkout_product_img" />
+        <img
+          src="../media/Jacket_1.png"
+          alt="products img of a jacket, color: orange at the top and blue at the bottom. with a horizontal zipper in the middle"
+          class="checkout_product_img"
+        />
         <div class="checkout_product_info">
           <p>Pushing</p>
           <p>Men’s rain jacket</p>
+          <div class="total-counter"></div>
         </div>
       </div>
     </div>
     <div class="checkout_box_main_2">
       <div class="checkout_product_info">
-        <p>X 1</p>
+        <div class="cart-page">
+          <div class="cart-list"></div>
+          <div class="total-counter"></div>
+          <div class="total"></div>
+        </div>
+        <!--<p>X 1</p>-->
       </div>
     </div>
-    <div class="checkout_box_button">
-      <span class="checkout_button" onclick="checkoutPagePurchase()"
-        >Continue</span
-      >
+    <div class="checkout_box_button" onload="loadCart()">
+      <span class="checkout_button" onclick="checkoutPagePurchase()">Continue</span>
+      <a href="/checkout.html" class="">Checkout</a>
     </div>
   </div>
 </div>
