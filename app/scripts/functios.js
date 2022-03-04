@@ -14,14 +14,17 @@ $(".404").load("../components/404_page.html");
 function checkoutPage() {
   document.getElementById("checkoutPage").classList.add("checkout_page");
 
-  $(".checkout_page").load("../components/checkout_page.html");
+  $(".checkout_page").load("../components/checkout_page.html", function () {
+    loadCart();
+  });
   $("#checkoutPage").css("display", "block");
 }
 //$(".checkout_page").load("../components/checkout_page.html");
 
 function checkoutPagePurchase() {
-  $(".checkout_page").load("../components/checkout_page_purchase.html");
-  loadCart();
+  $(".checkout_page").load("../components/checkout_page_purchase.html", function () {
+    loadCart();
+  });
 }
 
 function checkoutPageSuccess() {
