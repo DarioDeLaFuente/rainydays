@@ -4,6 +4,7 @@ const productsContainer = document.querySelector(".product__block__info");
 const cart = document.querySelector(".cart");
 const cartList = document.querySelector(".cart-list");
 const totalContainer = document.querySelector(".total");
+const totalcounter = document.querySelector(".total-counter");
 let cartArray = [];
 
 productArray.forEach(function (product) {
@@ -62,14 +63,14 @@ productArray.forEach(function (product) {
               </div>
             </div>
           </div>
-
+        </div>
     `;
 });
 
 const button = document.querySelectorAll(".cart__button");
 button.forEach(function (button) {
   button.onclick = function (event) {
-    const itemToAdd = productArray.find((item) => item.id === event.target.dataset.product);
+    const itemToAdd = productArray.find((item) => (item.id += event.target.dataset.product));
 
     cartArray.push(itemToAdd);
 
@@ -81,13 +82,20 @@ button.forEach(function (button) {
 function showCart(cartItem) {
   cart.style.display = "block";
   cartList.innerHTML = "";
-  let total = "";
+  let total = 0;
+  let counter = 0;
   cartItem.forEach(function (cartElement) {
-    total += cartElement.price;
-    cartList.innerHTML += `<div class="cart-item">
-      <h4>${cartElement.name}</h4>
+    counter++;
+    total += parseInt(cartElement.price);
+    cartList.innerHTML = `<div class="cart-item">
+      <h3>${cartElement.name}</h3>
+      <h5>${cartElement.description}</h5>
       </div>
       `;
   });
-  totalContainer.innerHTML = `Total: ${total}`;
+  totalContainer.innerHTML = `Total: ${total},-`;
+  totalcounter.innerHTML = `<div class="">${counter}
+  <a href="/checkout.html" class="total-counter"
+  ><i class="material-icons shopping__cart">shopping_cart ></i></a
+></div>`;
 }

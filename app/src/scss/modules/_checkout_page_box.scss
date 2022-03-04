@@ -55,8 +55,15 @@
 .checkout_box_title {
   grid-area: checkout_box_title;
   justify-content: center;
-
   padding-bottom: 15px;
+}
+.total {
+  z-index: 99999999;
+  color: red;
+}
+.total-counter {
+  z-index: 99999999;
+  color: red;
 }
 
 .checkout_box_main_1,
@@ -64,7 +71,7 @@
   grid-area: checkout_box_main_1;
   padding-left: 5px;
 }
-.checkout_box_main_2{
+.checkout_box_main_2 {
   text-align: center;
 }
 
