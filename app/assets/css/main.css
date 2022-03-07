@@ -580,7 +580,7 @@ a.bannerLinkBox-4 {
 .checkout_button {
   justify-content: center;
   margin: auto;
-  width: 300px;
+  width: 250px;
   height: 50px; }
 
 .checkout_button {
@@ -606,6 +606,14 @@ a.bannerLinkBox-4 {
 
 .checkout_product_info {
   padding: 5px; }
+
+.material-icons-style {
+  padding-top: 11px; }
+
+.product_delivery_selector_2 {
+  grid-area: product_delivery_selector;
+  display: flex;
+  padding-top: 25px; }
 
 .product__label,
 .block__product,
@@ -669,17 +677,17 @@ a.product__card__label__block__link__4 {
   top: 3.1rem;
   right: 0.5rem;
   width: calc(55% - (20px * 1));
-  background-color: #8c8303;
+  background-color: #275851;
   text-transform: uppercase; }
 
 .labelTale,
 .labelTale_2 {
   display: flex;
   filter: brightness(80%);
-  top: 4.4rem;
+  top: 4.3rem;
   right: -11px;
   border: 20px solid #0000;
-  border-left-color: #7c7401;
+  border-left-color: #1a373d;
   box-shadow: inset 0 0 10px #000;
   width: 30px;
   height: 30px; }

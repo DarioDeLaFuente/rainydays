@@ -1,11 +1,18 @@
 import { productArray } from "./constants/productList.js";
+import { sizeArray } from "./constants/sizeList.js";
+console.log("sizeArray", sizeArray);
 
 const productsContainer = document.querySelector(".product__block__info");
-const cart = document.querySelector(".cart");
-const cartList = document.querySelector(".cart-list");
+
 const totalContainer = document.querySelector(".total");
 const totalcounter = document.querySelector(".total-counter");
+
 let cartArray = [];
+let sizeHtml = "";
+
+sizeArray.forEach(function (size) {
+  sizeHtml += `<option>${size.size}</option>`;
+});
 
 productArray.forEach(function (product) {
   productsContainer.innerHTML += `
@@ -33,10 +40,7 @@ productArray.forEach(function (product) {
               <label for="cart_options"></label>
               <select id="cart_options">
                 <option disabled selected>Choose size</option>
-                <option>S</option>
-                <option>M</option>
-                <option>L</option>
-                <option>XL</option>
+                ${sizeHtml}
               </select>
               <div class="product_button_selector">
                 <span class="cart__button" data-product="${product.id}">Add to cart</span>
@@ -44,25 +48,13 @@ productArray.forEach(function (product) {
               </div>
             </div>
             <div class="product_delivery_selector">
-              <div class="shipping__options__grid-container">
-                <div class="shipping__options_1">
-                  <span class="material-icons">local_shipping</span>
-                  <label for="shipping__options">Shipping options</label>
-                </div>
-                <div class="shipping__options_2">
-                  <form class="shipping__options">
-                    <input
-                      type="text"
-                      id="shipping__options"
-                      name="shipping__options"
-                      placeholder=" Zip code"
-                    />
-                    <span class="shipping__search__button">Search</span>
-                  </form>
-                </div>
-              </div>
+                <span class="material-icons material-icons-style">inventory_2</span>
+                <p> FREE SHIPPING & RETURNS</p> 
             </div>
-          </div>
+            <div class="product_delivery_selector_2">
+                <span class="material-icons material-icons-style">local_shipping</span>
+                <p> 2-5 BUSINESS DAYS</p> 
+            </div>
         </div>
     `;
 });
@@ -70,8 +62,11 @@ productArray.forEach(function (product) {
 const button = document.querySelectorAll(".cart__button");
 button.forEach(function (button) {
   button.onclick = function (event) {
+    const productSize = document.querySelector("#cart_options");
+    console.log("productSize", productSize);
     const itemToAdd = productArray.find((item) => (item.id += event.target.dataset.product));
-
+    itemToAdd.size = productSize.options[productSize.selectedIndex].text;
+    console.log("itemToadd", itemToAdd);
     cartArray.push(itemToAdd);
 
     showCart(cartArray);
@@ -80,6 +75,9 @@ button.forEach(function (button) {
 });
 
 function showCart(cartItem) {
+  const cartList = document.querySelector(".cart-list");
+  const cart = document.querySelector(".cart");
+  console.log("cartItem", cartItem);
   cart.style.display = "block";
   cartList.innerHTML = "";
   let total = 0;
@@ -87,9 +85,10 @@ function showCart(cartItem) {
   cartItem.forEach(function (cartElement) {
     counter++;
     total += parseInt(cartElement.price);
-    cartList.innerHTML = `<div class="cart-item">
+    cartList.innerHTML += `<div class="cart-item">
       <h3>${cartElement.name}</h3>
       <h5>${cartElement.description}</h5>
+      <h5>${cartElement.size}</h5>
       </div>
       `;
   });

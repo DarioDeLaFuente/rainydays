@@ -7,7 +7,7 @@ window.loadCart = function () {
   //console.log(totalContainer);
   let total = 0;
   let counter = 0;
-  if (!cartContainer) return;
+  if (!cartContainer || !cartItem) return;
   cartItem.forEach(function (cartElement) {
     counter++;
     total += parseInt(cartElement.price);
@@ -28,3 +28,7 @@ window.loadCart = function () {
   console.log("total", totalCounter);
 };
 loadCart();
+
+window.loadSize = function () {
+  console.log(loadSize);
+};
