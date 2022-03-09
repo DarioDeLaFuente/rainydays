@@ -39,73 +39,40 @@
       <div class="container">
         <div class="grid">
           <div class="grid-cell--md-6 grid-cell--lg-6">
-            <form class="form">
-              <p>Send us your thoughts</p>
-              <input class="form-name" type="text" id="name" placeholder="Dario De la Fuente" />
-              <input
-                class="email-input"
-                type="email"
-                id="email"
-                placeholder="DarioDelaFuente@test.com"
-              />
-              <div class="checkbox-container">
-                <div class="form form--column">
-                  <div class="box-container">
-                    <label for="cancel_order">
-                      <input type="checkbox" id="cancel_order" />Cancel order
-                      <span class="checkmark"></span>
-                    </label>
-                  </div>
-                  <div class="box-container">
-                    <label for="vacancies">
-                      <input type="checkbox" id="vacancies" />Vacancies
-                      <span class="checkmark"></span>
-                    </label>
-                  </div>
-                  <div class="box-container">
-                    <label for="privacy_and_data_security">
-                      <input type="checkbox" id="privacy_and_data_security" />Privacy and data
-                      security
-                      <span class="checkmark"></span>
-                    </label>
-                  </div>
-                </div>
-                <div class="form form--column">
-                  <div class="box-container">
-                    <label for="return_and_exchange">
-                      <input type="checkbox" id="return_and_exchange" />Return and exchange
-                      <span class="checkmark"></span>
-                    </label>
-                  </div>
-                  <div class="box-container">
-                    <label for="guarantee">
-                      <input type="checkbox" id="guarantee" />Guarantee
-                      <span class="checkmark"></span>
-                    </label>
-                  </div>
-                  <div class="box-container">
-                    <label for="complaint">
-                      <input type="checkbox" id="complaint" />Complaint
-                      <span class="checkmark"></span>
-                    </label>
-                  </div>
-                </div>
-              </div>
-              <div class="form-button">
-                <button>Submit</button>
-              </div>
-            </form>
+            <div class="form-container">
+              <form name="contactForm" method="get" onsubmit=" return validate(event)">
+                <h1>contact</h1>
+                <label class="" for="name">Name:</label>
+                <input class="" type="text" id="name" name="name" />
+                <div class="validate-message"></div>
+                <label class="" for="subject">Subject:</label>
+                <input class="" type="text" id="subject" name="subject" />
+                <div class="validate-message"></div>
+                <label class="" for="email">Email:</label>
+                <input class="" type="email" id="email" name="email" />
+                <div class="validate-message"></div>
+                <label class="" for="message">Message:</label>
+                <input class="" type="text" id="message" name="message" />
+                <div class="validate-message"></div>
+                <input class="" type="submit" value="Submit" />
+              </form>
+            </div>
+            <div class="form-passed"></div>
           </div>
           <div class="grid-cell--md-6">
             <div class="box form-box-1">
-              <div>
-                <p>An example of body text</p>
+              <p>An example of body text</p>
+              <div class="product_delivery_selector">
+                <span class="material-icons material-icons-style">location_on</span>
+                <p>Nequi omnit quasit eost aut fugit ut estium susam fuga. Fic</p>
               </div>
-              <div>
-                <p>ADR: Nequi omnit quasit eost aut fugit ut estium susam fuga. Fic</p>
+              <div class="product_delivery_selector">
+                <span class="material-icons material-icons-style">local_post_office</span>
+                <p>support@rainydays.com</p>
               </div>
-              <div>
-                <p>TLF: 45545665</p>
+              <div class="product_delivery_selector">
+                <span class="material-icons material-icons-style">phone</span>
+                <p>+47 455 45 665</p>
               </div>
             </div>
             <div class="box form-box-2">
@@ -130,5 +97,7 @@
       crossorigin="anonymous"
     ></script>
     <script src="scripts/functios.js"></script>
+    <script src="scripts/contact.js"></script>
+    <script src="scripts/cart.js" type="module"></script>
   </body>
 </html>

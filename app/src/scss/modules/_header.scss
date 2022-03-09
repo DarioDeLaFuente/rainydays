@@ -42,17 +42,25 @@
 }
 
 .bannerLink a {
-  background-color: #fff;
+  background-color: #275851;
   padding: 15px;
+  color: #fff;
+  border-radius: 10px;
 }
 
 a.bannerLinkBlock {
-  color: #000;
+  color: #fff;
   font-weight: bolder;
   font-size: 15px;
   @media #{$screen__l} {
     font-size: 15px;
   }
+}
+a.bannerLinkBlock:hover {
+  background-color: #fff;
+  padding: 15px;
+  color: #000;
+  border-radius: 10px;
 }
 
 .search__icon {

@@ -2,6 +2,10 @@ window.loadCart = function () {
   const cartItem = JSON.parse(localStorage.getItem("cartList"));
   console.log(cartItem);
   const cartContainer = document.querySelectorAll(".cart-list");
+  cartContainer.forEach(function (el) {
+    el.innerHTML = "";
+  });
+
   const totalContainer = document.querySelectorAll(".total");
   const totalCounter = document.querySelectorAll(".total-counter");
   //console.log(totalContainer);
@@ -12,9 +16,10 @@ window.loadCart = function () {
     counter++;
     total += parseInt(cartElement.price);
     cartContainer.forEach(function (el) {
-      el.innerHTML = `<div class="cart-item">
+      el.innerHTML += `<div class="cart-item">
         <h3>${cartElement.name}</h3>
         <h5>${cartElement.description}</h5>
+        <h5>${cartElement.size}</h5>
         </div>
         `;
     });
@@ -27,6 +32,13 @@ window.loadCart = function () {
   });
   console.log("total", totalCounter);
 };
+
+window.showCart = function () {
+  const cartList = document.querySelector(".cart-list");
+  const cart = document.querySelector(".cart");
+  cart.style.display = "block";
+};
+
 loadCart();
 
 window.loadSize = function () {

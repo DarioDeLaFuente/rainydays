@@ -22,9 +22,10 @@
 .product__card__label__block__link__3,
 .product__card__label__block__link__4 {
   z-index: 4;
-
-  background-color: #0000;
-  border: solid 1px #000;
+  background-color: #2758518f;
+  border-radius: 5px;
+  color: #fff;
+  //border: solid 1px #000;
 }
 
 a,
@@ -32,7 +33,6 @@ a,
 .product__card__label__block__link__2,
 .product__card__label__block__link__3,
 .product__card__label__block__link__4 {
-  color: #000;
   font-size: 15px;
   font-weight: bold;
 }

@@ -1,63 +1,57 @@
-const form = document.querySelector("form");
-const message = document.querySelector("#message");
-//
-const fullName = document.querySelector("#name");
-const fullNameError = document.querySelector("#nameError");
-//
-const email = document.querySelector("#email");
-const emailError = document.querySelector("#emailError");
-//
-const contactMessage = document.querySelector("#contact-message");
-const contactError = document.querySelector("#contact-error");
-//
+const formpassed = document.querySelector(".form-passed");
 
-function validateForm(event) {
+function validate(event) {
   event.preventDefault();
+  let passed = true;
+  let name = document.forms["contactForm"]["name"].value;
+  let subject = document.forms["contactForm"]["subject"].value;
+  let email = document.forms["contactForm"]["email"].value;
+  let message = document.forms["contactForm"]["message"].value;
 
-  if (checkLength(fullName.value, 1, 0) === true) {
-    fullNameError.style.display = "none";
-    document.querySelector("#name").classList.remove("error-frame");
+  if (name.trim() == "") {
+    document.querySelectorAll("#name + .validate-message")[0].innerHTML =
+      displayFormError("A name is required");
+    passed = false;
   } else {
-    fullNameError.style.display = "block";
-    document.querySelector("#name").classList.add("error-frame");
+    document.querySelectorAll("#name + .validate-message")[0].innerHTML = "";
   }
-  if (validateEmail(email.value) === true) {
-    emailError.style.display = "none";
-    document.querySelector("#email").classList.remove("error-frame");
+  if (subject.trim().length <= 10) {
+    document.querySelectorAll("#subject + .validate-message")[0].innerHTML = displayFormError(
+      "* Must have a value with a minimum length of 10"
+    );
+    passed = false;
   } else {
-    emailError.style.display = "block";
-    document.querySelector("#email").classList.add("error-frame");
+    document.querySelectorAll("#subject + .validate-message")[0].innerHTML = "";
   }
-  if (checkLength(contactMessage.value, 10, 0) === true) {
-    contactError.style.display = "none";
-    document.querySelector("#contact-message").classList.remove("error-frame");
+  if (validateEmail(email.trim()) == "") {
+    document.querySelectorAll("#email + .validate-message")[0].innerHTML = displayFormError(
+      "* Must have a value email"
+    );
+    passed = false;
   } else {
-    contactError.style.display = "block";
-    document.querySelector("#contact-message").classList.add("error-frame");
+    document.querySelectorAll("#email + .validate-message")[0].innerHTML = "";
   }
-
-  if (
-    checkLength(fullName.value, 1, 0) &&
-    validateEmail(email.value) &&
-    checkLength(contactMessage.value, 10, 0) === true
-  ) {
-    message.innerHTML = '<div class="message">Your message has been sent</div>';
-    form.reset();
+  if (message.trim().length <= 25) {
+    document.querySelectorAll("#message + .validate-message")[0].innerHTML = displayFormError(
+      "* Must have a value with a minimum length of 25"
+    );
+    passed = false;
   } else {
-    message.innerHTML = "";
+    document.querySelectorAll("#message + .validate-message")[0].innerHTML = "";
   }
-}
-
-form.addEventListener("submit", validateForm);
-
-function checkLength(value, len) {
-  if (value.trim().length > len) {
-    return true;
-  } else {
-    return false;
+  if (passed) {
+    document.querySelector(".form-container").style.display = "none";
+    formpassed.innerHTML = displayFormSuccess("THANK YOU FOR YOUR SUBSCRIPTION!");
   }
 }
 
+//
+function displayFormError(formErrorMessage = "Form unknown error") {
+  return `<div class="form-error"><div class="form-error-info">${formErrorMessage}</div></div>`;
+}
+function displayFormSuccess(formSuccessMessage = "SuccessMessage") {
+  return `<div class="form-success"><div class="success-message-text">${formSuccessMessage}</div><div class="success-message-conteiner"></div></div>`;
+}
 function validateEmail(email) {
   const regEx = /\S+@\S+\.\S+/;
   const patternMatches = regEx.test(email);

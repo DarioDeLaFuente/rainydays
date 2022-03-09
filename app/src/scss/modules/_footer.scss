@@ -36,6 +36,22 @@
 .footer__block-4 {
   grid-area: footer__block-4;
 }
+.footer_h3 {
+  color: #fff;
+  border-bottom: solid #fff;
+  //text-align: center;
+}
+.add_block {
+  background-color: #025951;
+  color: #fff;
+  border-radius: 5px;
+}
+.add_block:hover {
+  background-color: #fff;
+  color: #025951;
+  border-radius: 5px;
+}
+
 .footer__block-5,
 .footer__block-5-a {
   padding-top: 25px;

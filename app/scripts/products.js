@@ -64,37 +64,21 @@ button.forEach(function (button) {
   button.onclick = function (event) {
     const productSize = document.querySelector("#cart_options");
     console.log("productSize", productSize);
-    const itemToAdd = productArray.find((item) => (item.id += event.target.dataset.product));
+    const itemToAdd = Object.assign(
+      {},
+      productArray.find((item) => (item.id += event.target.dataset.product))
+    );
     itemToAdd.size = productSize.options[productSize.selectedIndex].text;
     console.log("itemToadd", itemToAdd);
     cartArray.push(itemToAdd);
-
-    showCart(cartArray);
     localStorage.setItem("cartList", JSON.stringify(cartArray));
+    loadCart();
+    showCart();
   };
 });
 
-function showCart(cartItem) {
+function showCart() {
   const cartList = document.querySelector(".cart-list");
   const cart = document.querySelector(".cart");
-  console.log("cartItem", cartItem);
   cart.style.display = "block";
-  cartList.innerHTML = "";
-  let total = 0;
-  let counter = 0;
-  cartItem.forEach(function (cartElement) {
-    counter++;
-    total += parseInt(cartElement.price);
-    cartList.innerHTML += `<div class="cart-item">
-      <h3>${cartElement.name}</h3>
-      <h5>${cartElement.description}</h5>
-      <h5>${cartElement.size}</h5>
-      </div>
-      `;
-  });
-  totalContainer.innerHTML = `Total: ${total},-`;
-  totalcounter.innerHTML = `<div class="">${counter}
-  <a href="/checkout.html" class="total-counter"
-  ><i class="material-icons shopping__cart">shopping_cart ></i></a
-></div>`;
 }

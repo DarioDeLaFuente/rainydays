@@ -280,16 +280,24 @@ div p {
       display: block; } }
 
 .bannerLink a {
-  background-color: #fff;
-  padding: 15px; }
+  background-color: #275851;
+  padding: 15px;
+  color: #fff;
+  border-radius: 10px; }
 
 a.bannerLinkBlock {
-  color: #000;
+  color: #fff;
   font-weight: bolder;
   font-size: 15px; }
   @media only screen and (min-width: 1024px) {
     a.bannerLinkBlock {
       font-size: 15px; } }
+
+a.bannerLinkBlock:hover {
+  background-color: #fff;
+  padding: 15px;
+  color: #000;
+  border-radius: 10px; }
 
 .search__icon {
   justify-content: flex-end;
@@ -392,6 +400,20 @@ a.bannerLinkBlock {
 
 .footer__block-4 {
   grid-area: footer__block-4; }
+
+.footer_h3 {
+  color: #fff;
+  border-bottom: solid #fff; }
+
+.add_block {
+  background-color: #025951;
+  color: #fff;
+  border-radius: 5px; }
+
+.add_block:hover {
+  background-color: #fff;
+  color: #025951;
+  border-radius: 5px; }
 
 .footer__block-5,
 .footer__block-5-a {
@@ -538,7 +560,8 @@ a.bannerLinkBox-4 {
 
 .total {
   z-index: 99999999;
-  color: red; }
+  color: green;
+  padding: 5px; }
 
 .total-counter {
   z-index: 99999999;
@@ -587,6 +610,23 @@ a.bannerLinkBox-4 {
   background-color: #025951;
   color: #fff;
   cursor: pointer; }
+
+.checkout_button_cart {
+  background-color: #fff;
+  border: solid 1px #025951;
+  padding: 5px;
+  color: #025951;
+  cursor: pointer;
+  margin: 5px;
+  border-radius: 5px; }
+
+.checkout_button_cart:hover {
+  background-color: #025951;
+  padding: 5px;
+  color: #fff;
+  cursor: pointer;
+  margin: 5px;
+  border-radius: 5px; }
 
 .checkout_button_exit {
   background-color: #fff;
@@ -637,15 +677,15 @@ a.bannerLinkBox-4 {
 .product__card__label__block__link__3,
 .product__card__label__block__link__4 {
   z-index: 4;
-  background-color: #0000;
-  border: solid 1px #000; }
+  background-color: #2758518f;
+  border-radius: 5px;
+  color: #fff; }
 
 a,
 .product__card__label__block__link__1,
 .product__card__label__block__link__2,
 .product__card__label__block__link__3,
 .product__card__label__block__link__4 {
-  color: #000;
   font-size: 15px;
   font-weight: bold; }
 
@@ -795,6 +835,12 @@ a.product__card__label {
   @media only screen and (min-width: 1024px) {
     .product__card__label__block__link__4 {
       right: 60px; } }
+
+.form-container {
+  max-width: 500px;
+  margin: auto; }
+  .form-container input {
+    width: 100%; }
 
 .form,
 .checkbox-container,
