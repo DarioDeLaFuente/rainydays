@@ -1,12 +1,6 @@
 import { productArray } from "./constants/productList.js";
 import { sizeArray } from "./constants/sizeList.js";
-console.log("sizeArray", sizeArray);
-
 const productsContainer = document.querySelector(".product__block__info");
-
-const totalContainer = document.querySelector(".total");
-const totalcounter = document.querySelector(".total-counter");
-
 let cartArray = [];
 let sizeHtml = "";
 
@@ -28,7 +22,7 @@ productArray.forEach(function (product) {
               <h4>${product.description}</h4>
             </div>
             <div class="product_price">
-              <p>${product.price}</p>
+              <p>${product.price} ,-</p>
             </div>
             <div class="product_img">
               <img
@@ -63,13 +57,11 @@ const button = document.querySelectorAll(".cart__button");
 button.forEach(function (button) {
   button.onclick = function (event) {
     const productSize = document.querySelector("#cart_options");
-    console.log("productSize", productSize);
     const itemToAdd = Object.assign(
       {},
       productArray.find((item) => (item.id += event.target.dataset.product))
     );
     itemToAdd.size = productSize.options[productSize.selectedIndex].text;
-    console.log("itemToadd", itemToAdd);
     cartArray.push(itemToAdd);
     localStorage.setItem("cartList", JSON.stringify(cartArray));
     loadCart();
@@ -78,7 +70,6 @@ button.forEach(function (button) {
 });
 
 function showCart() {
-  const cartList = document.querySelector(".cart-list");
   const cart = document.querySelector(".cart");
   cart.style.display = "block";
 }

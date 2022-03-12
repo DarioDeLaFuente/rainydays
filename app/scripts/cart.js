@@ -8,7 +8,6 @@ window.loadCart = function () {
 
   const totalContainer = document.querySelectorAll(".total");
   const totalCounter = document.querySelectorAll(".total-counter");
-  //console.log(totalContainer);
   let total = 0;
   let counter = 0;
   if (!cartContainer || !cartItem) return;
@@ -19,7 +18,7 @@ window.loadCart = function () {
       el.innerHTML += `<div class="cart-item">
         <h3>${cartElement.name}</h3>
         <h5>${cartElement.description}</h5>
-        <h5>${cartElement.size}</h5>
+        <h5>size:${cartElement.size}</h5>
         </div>
         `;
     });
@@ -28,7 +27,7 @@ window.loadCart = function () {
     el2.innerHTML = `Total: ${total},-`;
   });
   totalCounter.forEach(function (el3) {
-    el3.innerHTML = `<div class="">${counter}`;
+    el3.innerHTML = `<div class="">X${counter}`;
   });
   console.log("total", totalCounter);
 };

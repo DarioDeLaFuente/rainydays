@@ -163,3 +163,28 @@
   display: flex;
   padding-top: 25px;
 }
+.checkout_titel {
+  text-align: center;
+}
+.checkout_container {
+  display: block;
+  justify-content: center;
+  width: 100%;
+  @media #{$screen__m} {
+    display: flex;
+  }
+}
+.checkout_box_1 {
+  width: 25%;
+}
+.checkout_box_2 {
+  width: 25%;
+}
+.cart-page {
+  width: 100%;
+  padding: 15px;
+}
+
+.cart_list_checkout {
+  display: flex;
+}

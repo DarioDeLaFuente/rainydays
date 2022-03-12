@@ -34,14 +34,55 @@
     <!-- /Nav -->
     <nav class="topnav"></nav>
     <!-- /Nav -->
-    <main class="main">
-      <!--<h1 class="hidden">RainyDays</h1>-->
-      <div class="container">
-        <div class="grid">
+    <main>
+      <h1 class="checkout_titel">RainyDays</h1>
+      <div class="checkout_container">
+        <div class="checkout_box_1">
           <div class="cart-page">
-            <div class="cart-list"></div>
+            <div class="form-container">
+              <form
+                class="CheckoutForm"
+                name="checkoutForm"
+                method="get"
+                onsubmit=" return checkoutFormValidate(event)"
+              >
+                <label class="" for="name">Name:</label>
+                <input class="checkout_nane" type="text" id="name" name="name" />
+                <div class="validate-message"></div>
+                <br />
+                <label class="" for="email">Email:</label>
+                <input class="checkout_email" type="email" id="email" name="email" />
+                <div class="validate-message"></div>
+                <br />
+                <label class="" for="name">Address:</label>
+                <input class="checkout_address" type="text" id="address" name="address" />
+                <div class="validate-message"></div>
+                <br />
+                <label class="" for="name">zip code</label>
+                <input class="checkout_address" type="text" id="zip_code" name="zip code" />
+                <div class="validate-message"></div>
+                <button
+                  class="checkout_box_button checkout_button_exit"
+                  type="submit"
+                  value="Submit"
+                >
+                  Complete your purchase!
+                </button>
+              </form>
+            </div>
+            <div class="checkout_form-passed"></div>
+          </div>
+        </div>
+        <div class="checkout_box_2">
+          <div class="cart-page">
+            <div class="cart-list cart_list_checkout"></div>
             <div class="total-counter"></div>
+            <p>Total incl. delivery & VAT</p>
             <div class="total"></div>
+            <div class="product_delivery_selector_2">
+              <span class="material-icons material-icons-style">local_shipping</span>
+              <p>2-5 BUSINESS DAYS</p>
+            </div>
           </div>
         </div>
       </div>
@@ -55,8 +96,10 @@
       crossorigin="anonymous"
     ></script>
     <script src="scripts/functios.js"></script>
-    <script src="scripts/products.js" type="module"></script>
-    <script src="scripts/size.js" type="module"></script>
+    <script src="scripts/checkoutForm.js"></script>
+    <script src="scripts/contact.js"></script>
+    <!--<script src="scripts/checkoutForm.js" type="module"></script>
+    <script src="scripts/size.js" type="module"></script>-->
     <script src="scripts/cart.js" type="module"></script>
   </body>
 </html>

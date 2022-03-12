@@ -95,7 +95,11 @@ div p {
 
 .box {
   padding: 30px;
-  position: relative; }
+  position: relative;
+  margin: 0.9rem; }
+  @media only screen and (min-width: 768px) {
+    .box {
+      margin: 0; } }
   .box--center {
     justify-content: center; }
   .box--left {
@@ -655,6 +659,30 @@ a.bannerLinkBox-4 {
   display: flex;
   padding-top: 25px; }
 
+.checkout_titel {
+  text-align: center; }
+
+.checkout_container {
+  display: block;
+  justify-content: center;
+  width: 100%; }
+  @media only screen and (min-width: 768px) {
+    .checkout_container {
+      display: flex; } }
+
+.checkout_box_1 {
+  width: 25%; }
+
+.checkout_box_2 {
+  width: 25%; }
+
+.cart-page {
+  width: 100%;
+  padding: 15px; }
+
+.cart_list_checkout {
+  display: flex; }
+
 .product__label,
 .block__product,
 .block__product_2 {
@@ -838,9 +866,57 @@ a.product__card__label {
 
 .form-container {
   max-width: 500px;
-  margin: auto; }
+  margin: auto;
+  padding: 10px; }
   .form-container input {
-    width: 100%; }
+    width: 100%;
+    height: 30px;
+    border: solid #f1f1f1;
+    box-shadow: 0 10px 13px -7px #000, -20px 34px 18px 1px transparent;
+    margin-bottom: 15px; }
+  .form-container label {
+    margin: 5px; }
+  .form-container input[type="submit"] {
+    color: #fff;
+    background-color: #025951;
+    border: none;
+    height: 50px;
+    width: 80%;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10%; }
+
+.success-message-text {
+  text-align: center;
+  margin-top: 20%; }
+
+.form-error-info {
+  margin-bottom: 15px;
+  color: red; }
+
+.message {
+  min-height: 100px; }
+
+.checkout_nane {
+  width: 100%;
+  height: 30px;
+  border: solid #f1f1f1;
+  box-shadow: 0 10px 13px -7px #000, -20px 34px 18px 1px transparent;
+  margin-bottom: 15px; }
+
+.checkout_email {
+  width: 100%;
+  height: 30px;
+  border: solid #f1f1f1;
+  box-shadow: 0 10px 13px -7px #000, -20px 34px 18px 1px transparent;
+  margin-bottom: 15px; }
+
+.checkout_address {
+  width: 100%;
+  height: 30px;
+  border: solid #f1f1f1;
+  box-shadow: 0 10px 13px -7px #000, -20px 34px 18px 1px transparent;
+  margin-bottom: 15px; }
 
 .form,
 .checkbox-container,
