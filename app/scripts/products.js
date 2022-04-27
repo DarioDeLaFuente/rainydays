@@ -2,7 +2,7 @@ const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
 const id = params.get("id");
 
-const baseUrl = "http://rainydayscms.local/wp-json/wc/store/products/" + id;
+const baseUrl = "https://rainydayscrm.adaptmedia.net/wp-json/wc/store/products/" + id;
 
 //import { productArray } from "./constants/productList.js";
 import { sizeArray } from "./constants/sizeList.js";
@@ -21,8 +21,8 @@ async function getProduct(url) {
 
   if (!product.images.length) {
     product.images.push({
-      thumbnail: "http://rainydayscms.local/app/uploads/2022/04/dummy.png",
-      src: "http://rainydayscms.local/app/uploads/2022/04/dummy.png",
+      thumbnail: "https://rainydayscrm.adaptmedia.net/app/uploads/2022/04/dummy.png",
+      src: "https://rainydayscrm.adaptmedia.net/app/uploads/2022/04/dummy.png",
     });
   }
 

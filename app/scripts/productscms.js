@@ -1,4 +1,4 @@
-const baseUrl = "http://rainydayscms.local/wp-json/wc/store/products/";
+const baseUrl = "https://rainydayscrm.adaptmedia.net/wp-json/wc/store/products/";
 const productContainer = document.querySelector(".content");
 
 async function getProduct(url) {
@@ -7,7 +7,9 @@ async function getProduct(url) {
   let productListHtml = '<div class="grid">';
   products.forEach(function (product) {
     if (!product.images.length) {
-      product.images.push({ thumbnail: "http://rainydayscms.local/app/uploads/2022/04/dummy.png" });
+      product.images.push({
+        thumbnail: "https://rainydayscrm.adaptmedia.net/app/uploads/2022/04/dummy.png",
+      });
     }
     productListHtml += `
           <div class="grid-cell--md-6 grid-cell--lg-4">
