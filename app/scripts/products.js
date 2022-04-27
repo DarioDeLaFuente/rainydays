@@ -1,14 +1,37 @@
-import { productArray } from "./constants/productList.js";
+const queryString = document.location.search;
+const params = new URLSearchParams(queryString);
+const id = params.get("id");
+
+const baseUrl = "http://rainydayscms.local/wp-json/wc/store/products/" + id;
+
+//import { productArray } from "./constants/productList.js";
 import { sizeArray } from "./constants/sizeList.js";
 const productsContainer = document.querySelector(".product__block__info");
 let cartArray = [];
 let sizeHtml = "";
+let product = null;
 
 sizeArray.forEach(function (size) {
   sizeHtml += `<option>${size.size}</option>`;
 });
 
-productArray.forEach(function (product) {
+async function getProduct(url) {
+  const response = await fetch(url);
+  product = await response.json();
+
+  if (!product.images.length) {
+    product.images.push({
+      thumbnail: "http://rainydayscms.local/app/uploads/2022/04/dummy.png",
+      src: "http://rainydayscms.local/app/uploads/2022/04/dummy.png",
+    });
+  }
+
+  document.querySelector(".block__product__horizontal__scroll").innerHTML = generateGalleryHtml(
+    product.images
+  );
+
+  document.querySelector(".product_description").innerHTML = product.description;
+
   productsContainer.innerHTML += `
     <div class="product__info__grid__container">
             <div class="block__product_2">
@@ -19,10 +42,10 @@ productArray.forEach(function (product) {
             <div class="labelTale_2"></div>
             <div class="product_info">
               <h3>${product.name}</h3>
-              <h4>${product.description}</h4>
+              <h4>${product.short_description}</h4>
             </div>
             <div class="product_price">
-              <p>${product.price} ,-</p>
+              <p>${product.prices.price} ,-</p>
             </div>
             <div class="product_img">
               <img
@@ -51,25 +74,37 @@ productArray.forEach(function (product) {
             </div>
         </div>
     `;
-});
 
-const button = document.querySelectorAll(".cart__button");
-button.forEach(function (button) {
-  button.onclick = function (event) {
-    const productSize = document.querySelector("#cart_options");
-    const itemToAdd = Object.assign(
-      {},
-      productArray.find((item) => (item.id += event.target.dataset.product))
-    );
-    itemToAdd.size = productSize.options[productSize.selectedIndex].text;
-    cartArray.push(itemToAdd);
-    localStorage.setItem("cartList", JSON.stringify(cartArray));
-    loadCart();
-    showCart();
-  };
-});
+  const button = document.querySelectorAll(".cart__button");
+
+  button.forEach(function (button) {
+    button.onclick = function (event) {
+      const productSize = document.querySelector("#cart_options");
+      product.size = productSize.options[productSize.selectedIndex].text;
+      cartArray.push(product);
+      localStorage.setItem("cartList", JSON.stringify(cartArray));
+      loadCart();
+      showCart();
+    };
+  });
+}
+
+getProduct(baseUrl);
 
 function showCart() {
   const cart = document.querySelector(".cart");
   cart.style.display = "block";
+}
+
+function generateGalleryHtml(images) {
+  if (images.length) {
+    let galleryHtml = "";
+    images.forEach(function (image) {
+      galleryHtml += `
+      <img src="${image.src}" />
+      `;
+    });
+
+    return galleryHtml;
+  }
 }

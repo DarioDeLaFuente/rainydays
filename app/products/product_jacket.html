@@ -38,14 +38,14 @@
     <div class="grid">
       <div class="block__product__container">
         <div class="scope">
-          <!--<tables>
-              <tr>
+          <!-- <tables>
+            <tr>
               <th scope="col">| Product</th>
-              </tr>
+            </tr>
           </tables>-->
         </div>
         <div class="block__product__horizontal__scroll">
-          <img
+          <!--<img
             src="../media/Jacket_back.png"
             alt="products img of the jackets backside, color: orange at the top and blue at the bottom."
           />
@@ -70,9 +70,9 @@
             alt="products img of a jacket, color: orange at the top and blue at the bottom. with a horizontal zipper in the middle"
           />
           <img
-            src="../media/Jacket_back.png"
+            src="${product.images[0].thumbnail}"
             alt="products img of the jackets backside, color: orange at the top and blue at the bottom."
-          />
+          />-->
         </div>
         <div class="product__block__info"></div>
       </div>
@@ -88,17 +88,7 @@
               >
                 &times;
               </div>
-              <h1>title</h1>
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo, ipsum
-                praesentium. Possimus animi ab deserunt iure debitis, sed molestiae sapiente labore
-                saepe placeat expedita id adipisci itaque, repudiandae porro quos eligendi in eaque
-                corporis aliquid esse laborum qui tempora totam. Veritatis sunt hic autem, harum
-                odit aliquam error unde veniam nostrum quo distinctio. Quaerat, enim deserunt. A
-                cupiditate dolorum consequuntur maiores consequatur nulla, ullam animi illo libero
-                sit, voluptates earum nemo, tempora optio necessitatibus amet hic? Quibusdam, eius
-                dolores. Aperiam.
-              </p>
+              <div class="product_description"></div>
             </div>
           </div>
           <button class="alert" onclick="toggleAlertBlock()" onkeyup="toggleAlertBlock()">
@@ -128,10 +118,11 @@
       integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
       crossorigin="anonymous"
     ></script>
-
-    <script src="../scripts/cart.js" type="module"></script>
     <script src="../scripts/products.js" type="module"></script>
     <script src="../scripts/functios.js"></script>
-    <script scr="./scripts/size.js" type="module"></script>
+    <script src="../scripts/cart.js" type="module"></script>
+    <script scr="../scripts/size.js" type="module"></script>
+    <!--<script src="../scripts/productImgCarousel.js" type="module"></script>-->
+    <!--<script src="../scripts/productscms.js" type="module"></script>-->
   </body>
 </html>

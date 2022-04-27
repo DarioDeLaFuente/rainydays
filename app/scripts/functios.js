@@ -16,7 +16,6 @@ function checkoutPage() {
 
   $(".checkout_page").load("../components/checkout_page.html", function () {
     loadCart();
-    //loadSize();
   });
   $("#checkoutPage").css("display", "block");
 }
@@ -25,14 +24,12 @@ function checkoutPage() {
 function checkoutPagePurchase() {
   $(".checkout_page").load("../components/checkout_page_purchase.html", function () {
     loadCart();
-    //loadSize();
   });
 }
 
 function checkoutPageSuccess() {
   $(".checkout_page").load("../components/checkout_page_success.html");
   loadCart();
-  //loadSize();
 }
 
 /*

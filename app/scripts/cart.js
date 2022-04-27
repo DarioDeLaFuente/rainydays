@@ -13,11 +13,11 @@ window.loadCart = function () {
   if (!cartContainer || !cartItem) return;
   cartItem.forEach(function (cartElement) {
     counter++;
-    total += parseInt(cartElement.price);
+    total += parseInt(cartElement.prices.price);
     cartContainer.forEach(function (el) {
       el.innerHTML += `<div class="cart-item">
         <h3>${cartElement.name}</h3>
-        <h5>${cartElement.description}</h5>
+        <h5>${cartElement.short_description}</h5>
         <h5>size:${cartElement.size}</h5>
         </div>
         `;
@@ -29,7 +29,6 @@ window.loadCart = function () {
   totalCounter.forEach(function (el3) {
     el3.innerHTML = `<div class="">X${counter}`;
   });
-  console.log("total", totalCounter);
 };
 
 window.showCart = function () {
