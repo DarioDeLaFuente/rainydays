@@ -49,7 +49,7 @@ async function getProduct(url) {
             </div>
             <div class="product_img">
               <img
-                src="../media/Jacket_1.png"
+                src="${product.images[0].thumbnail}"
                 alt="products img of a jacket, color: orange at the top and blue at the bottom. with a horizontal zipper in the middle"
               />
             </div>
