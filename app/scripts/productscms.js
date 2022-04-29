@@ -30,7 +30,7 @@ async function getProduct(url) {
                 <div class="block__product__label">
                 <h3>${product.name}</h3>
                 <h6>${product.short_description}</h6>
-                <p>${product.prices.price} </p>
+                <p>${product.prices.price},- </p>
                 </div>
               </a>
             </div>
