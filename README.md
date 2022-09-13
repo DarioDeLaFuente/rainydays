@@ -43,7 +43,7 @@ This is how to get the project started.
 1. Clone the repo:
 
 ```bash
-git clone 
+git clone https://github.com/DarioDeLaFuente/rainydays.git
 ```
 ### Running
 
