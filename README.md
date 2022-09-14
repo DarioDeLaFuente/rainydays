@@ -1,6 +1,6 @@
 # Rainydays the cross-course project
 
-![image](https://sharp-fermi-318929.netlify.app/media/RainyDays_Logo.png)
+![image](https://schoolassignment.adaptmedia.net/app/uploads/2022/09/Screenshot-2022-09-14-at-19.26.52.png)
 
 This is a simple overview of the use/purpose of the project.
 
@@ -82,6 +82,8 @@ npm rebuild node-scss
 ```
 docker-compose stop
 ```
+
+## Link to the site: https://sharp-fermi-318929.netlify.app/
 
 ## Contact
 
