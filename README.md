@@ -1,6 +1,6 @@
 # Rainydays the cross-course project
 
-![image](https://schoolassignment.adaptmedia.net/app/uploads/2022/09/Screenshot-2022-09-14-at-19.26.52.png)
+![image](https://schoolassignment.adaptmedia.net/app/uploads/2022/10/Screenshot-2022-09-14-at-19.26.52.png)
 
 This is a simple overview of the use/purpose of the project.
 
